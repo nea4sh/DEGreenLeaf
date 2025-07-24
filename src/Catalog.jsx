@@ -25,10 +25,24 @@ const products = [
   price: "988 ₽",
   article: "00000452CGA046",
   image: "https://imgur.com/LsZKBWS.png",
-  fullRu: "Массажная жидкость «Секреты китайской медицины» объединяет в себе целебные свойства натуральных растительных экстрактов для облегчения боли и улучшения состояния кожи. Продукт предназначен для облегчения симптомов остеохондроза, суставных и мышечных болей, а также при головной и поясничной боли. Он эффективен при вывихах, переломах, повреждении мышц и сухожилий, воспалениях различной этиологии и кожных проблемах в стадии ремиссии. Действие продукта: - Снимает отеки и гематомы. - Обладает сильным обезболивающим эффектом при ушибах, вывихах и растяжениях. - Способствует выведению токсинов, шлаков и солей из застойных мышц. - Борется с папилломами. - Снимает мышечный спазм. - Облегчает зуд и раздражение при укусах насекомых. - Улучшает подвижность суставов и способствует восстановлению хрящевой и соединительной ткани. - Улучшает циркуляцию крови. Состав: Экстракт евкоммии липовидной (Eucommia Ulmoides), экстракт реймании клейкой (Rehmannia Glutinosa), экстракт вернонии Каминга (Vernonia Cumingiana), экстракт спатолобуса поднятого (Spatholobus Suberectus), экстракт корня имбиря (Zingiber Officinale), экстракт мяты перечной (Mentha Haplocalix), экстракт китайской повилики (Cuscuta Chinensis), экстракт китайской ангелики (Angelica Sinensis), экстракт лигустикума Сычуаньского (Ligusticum Chuanxiong), экстракт атрактилодеса большеголового (Atractylodes Macrocephala), экстракт шафрана (Crocus Sativus), экстракт полигалы тонколистной (Polygala Tenuifolia), экстракт ангелики пушистой (Angelica Pubescens), экстракт женьшеня (Panax Ginseng), экстракт нотоптеригиума надрезанного (Notopterygium Incisum), экстракт азиатской центеллы (Centella Asiatica), экстракт гастродии высокой (Gastrodia Elata Blume), ионы серебра (0,4%-0,6%).",
-  fullDe: "",
+  fullRu: "Массажная жидкость «Секреты китайской медицины» сочетает целебные свойства натуральных растительных экстрактов для облегчения боли и улучшения состояния кожи. Продукт предназначен для облегчения симптомов остеохондроза, суставных и мышечных болей, а также при головной и поясничной боли. Эффективен при вывихах, переломах, повреждениях мышц и сухожилий, воспалениях различной природы и кожных проблемах в стадии ремиссии. Действие продукта: — Снимает отёки и гематомы. — Обладает выраженным обезболивающим эффектом при ушибах, вывихах и растяжениях. — Способствует выведению токсинов и солей из застойных мышц. — Борется с папилломами. — Снимает мышечные спазмы. — Облегчает зуд и раздражение при укусах насекомых. — Улучшает подвижность суставов и способствует восстановлению хрящевой и соединительной ткани. — Улучшает циркуляцию крови. Состав: экстракт евкоммии липовидной, экстракт реймании клейкой, экстракт вернонии Каминга, экстракт спатолобуса поднятого, экстракт корня имбиря, экстракт мяты перечной, экстракт повилики китайской, экстракт ангелики китайской, экстракт лигустикума сычуаньского, экстракт атрактилодеса большеголового, экстракт шафрана, экстракт полигалы тонколистной, экстракт ангелики пушистой, экстракт женьшеня, экстракт нотоптеригиума надрезанного, экстракт центеллы азиатской, экстракт гастродии высокой, ионы серебра (0,4–0,6%).",
+  fullDe: "Die Massageflüssigkeit „Geheimnisse der chinesischen Medizin“ vereint die heilenden Eigenschaften natürlicher Pflanzenextrakte zur Schmerzlinderung und Verbesserung des Hautzustands. Das Produkt ist zur Linderung von Symptomen bei Osteochondrose, Gelenk- und Muskelschmerzen sowie bei Kopf- und Rückenschmerzen bestimmt. Es ist wirksam bei Verstauchungen, Brüchen, Muskel- und Sehnenverletzungen, Entzündungen verschiedener Ursachen und Hautproblemen in der Remissionsphase. Wirkung des Produkts: – Reduziert Schwellungen und Hämatome. – Hat eine starke schmerzlindernde Wirkung bei Prellungen, Verstauchungen und Zerrungen. – Fördert die Ausleitung von Toxinen, Schlacken und Salzen aus verspannten Muskeln. – Wirkt gegen Papillome. – Lindert Muskelkrämpfe. – Mildert Juckreiz und Reizungen bei Insektenstichen. – Verbessert die Beweglichkeit der Gelenke und unterstützt die Regeneration von Knorpel- und Bindegewebe. – Fördert die Durchblutung. Zusammensetzung: Extrakt aus Eucommia ulmoides, Rehmannia glutinosa, Vernonia cumingiana, Spatholobus suberectus, Ingwerwurzel, Pfefferminze, Cuscuta chinensis, Angelica sinensis, Ligusticum chuanxiong, Atractylodes macrocephala, Safran, Polygala tenuifolia, Angelica pubescens, Ginseng, Notopterygium incisum, Centella asiatica, Gastrodia elata, Silberionen (0,4–0,6%).",
   usageRu: "Наносить на проблемные зоны легкими массирующими движениями 2–3 раза в день.",
-  usageDe: ""
+  usageDe: "Auf die betroffenen Stellen 2–3 Mal täglich mit leichten, massierenden Bewegungen auftragen."
+  },
+  {
+  id: 21,
+  nameRu: "Растворимый напиток со спирулиной и пробиотиками 2 г x 20",
+  nameDe: "Instantgetränk mit Spirulina und Probiotika 2 g x 20",
+  shortRu: "Пробиотики, пребиотики и спирулина для иммунитета и пищеварения",
+  shortDe: "Probiotika, Präbiotika und Spirulina für Immunität und Verdauung",
+  price: "1500 ₽",
+  article: "00000000SPB021",
+  image: "https://imgur.com/TvGFkaF.png",
+  fullRu: "Пробиотический комплекс: Напиток содержит разнообразные штаммы пробиотиков, такие как бифидобактерии, лактобациллы и стрептококки, которые способствуют поддержанию здоровой микрофлоры кишечника, улучшают пищеварение и укрепляют иммунную систему. Полезные олигосахариды: Наличие фруктоолигосахаридов, галактоолигосахаридов и других олигосахаридов делает напиток пребиотическим, так как эти компоненты стимулируют рост и активность полезных кишечных бактерий. Питательные вещества: Спирулина, водоросль, богатая белками, витаминами, минералами и антиоксидантами, способствует повышению общего уровня энергии и улучшению иммунитета. Поддержка иммунной системы: Комбинация пробиотиков и спирулины может укреплять иммунную систему, помогая организму бороться с инфекциями и воспалениями. Улучшение пищеварения: Пробиотики и пребиотики в составе напитка способствуют нормализации пищеварения, уменьшению вздутия живота и других проблем с желудочно-кишечным трактом. Объем: 40 г (2 г * 20 пакетиков). Состав: вода, сахар, низкомолекулярный изомальтоза, фруктоолигосахариды, галактоолигосахариды, соевые олигосахариды, кристаллическая фруктоза, устойчивый крахмал, замороженно-сушеное молозиво, порошок спирулины, бифидобактерии животного происхождения BLa36, бифидобактерии BI45, лактобациллы растительного происхождения JYLP-326, лактобациллы JYLC-374, Bacillus coagulans BCN019, лактококки JYLL-60, бифидобактерии JYBR-390, бифидобактерии HN019, лактобациллы HN001, лактобациллы LR47, лактобациллы LRa66, лактобациллы LC07, лактобациллы LC28, бифидобактерии BL21, лактобациллы растительного происхождения Lp90, CW006, лактококки CCFM7902, лактобациллы N13, бифидобактерии BBi77, бифидобактерии BLa54, лактобациллы Lp05, лактобациллы LA88, бифидобактерии BBrO2, лактобациллы LS09, лактобациллы LB50, термофильные стрептококки ST11, лактобациллы LG08, лактобациллы LH76, лактобациллы LF61, лактококки PP06, лактобациллы LJ09, лактобациллы LCr86.",
+  fullDe: "Probiotischer Komplex: Das Getränk enthält verschiedene Stämme von Probiotika wie Bifidobakterien, Laktobazillen und Streptokokken, die eine gesunde Darmflora unterstützen, die Verdauung verbessern und das Immunsystem stärken. Nützliche Oligosaccharide: Die enthaltenen Fructooligosaccharide, Galactooligosaccharide und andere Oligosaccharide machen das Getränk präbiotisch, da diese Komponenten das Wachstum und die Aktivität nützlicher Darmbakterien fördern. Nährstoffe: Spirulina, eine Alge, die reich an Proteinen, Vitaminen, Mineralstoffen und Antioxidantien ist, trägt zur Steigerung des allgemeinen Energielevels und zur Verbesserung der Immunität bei. Immunsystem-Unterstützung: Die Kombination von Probiotika und Spirulina kann das Immunsystem stärken und dem Körper helfen, Infektionen und Entzündungen zu bekämpfen. Verbesserte Verdauung: Probiotika und Präbiotika in der Zusammensetzung des Getränks fördern die Normalisierung der Verdauung, reduzieren Blähungen und andere Probleme des Magen-Darm-Trakts. Menge: 40 g (2 g * 20 Beutel). Zutaten: Wasser, Zucker, niedermolekulare Isomaltose, Fructooligosaccharide, Galactooligosaccharide, Soja-Oligosaccharide, kristalline Fructose, resistente Stärke, gefriergetrocknetes Kolostrum, Spirulinapulver, Bifidobakterien tierischen Ursprungs BLa36, Bifidobakterien BI45, pflanzliche Laktobazillen JYLP-326, Laktobazillen JYLC-374, Bacillus coagulans BCN019, Laktokokken JYLL-60, Bifidobakterien JYBR-390, Bifidobakterien HN019, Laktobazillen HN001, Laktobazillen LR47, Laktobazillen LRa66, Laktobazillen LC07, Laktobazillen LC28, Bifidobakterien BL21, pflanzliche Laktobazillen Lp90, CW006, Laktokokken CCFM7902, Laktobazillen N13, Bifidobakterien BBi77, Bifidobakterien BLa54, Laktobazillen Lp05, Laktobazillen LA88, Bifidobakterien BBrO2, Laktobazillen LS09, Laktobazillen LB50, thermophile Streptokokken ST11, Laktobazillen LG08, Laktobazillen LH76, Laktobazillen LF61, Laktokokken PP06, Laktobazillen LJ09, Laktobazillen LCr86.",
+  usageRu: "Растворить один пакетик в 100 мл тёплой воды, принимать 1-2 раза в день.",
+  usageDe: "Einen Beutel in 100 ml warmem Wasser auflösen, 1-2 Mal täglich einnehmen."
   },
   {
     id: 18,
@@ -45,6 +59,34 @@ const products = [
     usageDe: "Handwäsche: 20 ml auf 3–5 l Wasser, 10 Min einweichen, ausspülen. Maschine: passende Menge hinzufügen und Schonwaschgang wählen."
   },
   {
+  id: 22,
+  nameRu: "Питательный напиток с кальцием, магнием и цинком 300 мл",
+  nameDe: "Nährstoffgetränk mit Calcium, Magnesium und Zink 300 ml",
+  shortRu: "Минеральный напиток для костей, нервов и иммунитета",
+  shortDe: "Mineralgetränk für Knochen, Nerven und Immunsystem",
+  price: "998 ₽",
+  article: "00000000NMZ022",
+  image: "https://imgur.com/rz8leQs.png",
+  fullRu: "Напиток рекомендуется для людей, нуждающихся в повышенном потреблении минералов, для поддержания нормального уровня энергии, здоровья костей, нервной системы и иммунной защиты. Свойства напитка: ✔️ Поддержка здоровья костей и зубов ✔️ Регуляция нервной системы ✔️ Поддержка иммунной системы ✔️ Энергетическая поддержка ✔️ Улучшение состояния кожи ✔️ Поддержка сердечно-сосудистой системы ✔️ Снижение болей в мышцах и суставах. Магний — 230 мг, Кальций — 1800 мг, Цинк — 16 мг.",
+  fullDe: "Das Getränk wird für Menschen empfohlen, die einen erhöhten Mineralstoffbedarf haben, um ein normales Energieniveau, die Gesundheit von Knochen, Nervensystem und Immunschutz zu unterstützen. Eigenschaften des Getränks: ✔️ Unterstützung der Gesundheit von Knochen und Zähnen ✔️ Regulierung des Nervensystems ✔️ Unterstützung des Immunsystems ✔️ Energieunterstützung ✔️ Verbesserung des Hautzustands ✔️ Unterstützung des Herz-Kreislauf-Systems ✔️ Verringerung von Muskel- und Gelenkschmerzen. Magnesium – 230 mg, Calcium – 1800 mg, Zink – 16 mg.",
+  usageRu: "Откройте пакет и сразу употребляйте. Рекомендуемая дозировка — 2 пакета в день.",
+  usageDe: "Beutel öffnen und sofort trinken. Empfohlene Dosierung: 2 Beutel pro Tag."
+  },
+  {
+  id: 23,
+  nameRu: "Сухое верблюжье молоко с пробиотиками 500 г",
+  nameDe: "Kamelmilchpulver mit Probiotika 500 g",
+  shortRu: "Питательное сухое молоко с пробиотиками для здоровья",
+  shortDe: "Nährstoffreiches Kamelmilchpulver mit Probiotika für die Gesundheit",
+  price: "2499 ₽",
+  article: "00000000CMP023",
+  image: "https://imgur.com/14eT1tU.png",
+  fullRu: "Сухое верблюжье молоко Nilrich обогащено пробиотиками для оптимального питания и здоровья. Изготовленное из качественного молока с пастбищ, молоко дополнено пребиотиками, различными витаминами и минералами, а также активными пробиотиками. Продукт очищен с использованием передовых технологий, обладает хорошей растворимостью и нежным вкусом. Ингредиенты: Сырое верблюжье молоко или цельное сухое верблюжье молоко, обессоленная сухая сыворотка, изомальтоолигосахарид, концентрированный стандарт сывороточного белка, инулин (3 г/100 г), γ-линоленовая кислота (3 г/100 г), витамины (А, D, E, B, C), фолиевая кислота, пирофосфат железа, оксид цинка, натрий, карбонат кальция, таурин, пробиотики (Bifidobacterium Lactis, Streptococcus thermophilus). Пищевая ценность на 100 г: Энергия 1920 кДж, Белки 20,0 г, Жиры 20,0 г, Углеводы 48,0 г, Клетчатка 3,0 г, Натрий 550 мг, Витамин А 485 ед. gRE, Витамин D 8,6 мкг, Витамин E 11,35 мг -TE, Витамин B 0,95 мг, Витамин С 45,8 мг, Фолиевая кислота 285 ед. gDFE, Кальций 650 мг, Цинк 8,9 мг, Селен 5,56 мг, γ-линоленовая кислота 24,4 мкг, Таурин 3,0 г.",
+  fullDe: "Nilrich Kamelmilchpulver ist mit Probiotika für optimale Ernährung und Gesundheit angereichert. Hergestellt aus hochwertiger Weidemilch, angereichert mit Präbiotika, verschiedenen Vitaminen und Mineralstoffen sowie aktiven Probiotika. Das Produkt wird mit modernen Technologien gereinigt, hat eine gute Löslichkeit und einen milden Geschmack. Zutaten: Rohes Kamelmilchpulver oder Vollkamelmilchpulver, entsalzenes Molkenpulver, Isomaltooligosaccharid, Molkenproteinkonzentrat, Inulin (3 g/100 g), γ-Linolensäure (3 g/100 g), Vitamine (A, D, E, B, C), Folsäure, Eisenpyrophosphat, Zinkoxid, Natrium, Calciumcarbonat, Taurin, Probiotika (Bifidobacterium Lactis, Streptococcus thermophilus). Nährwertangaben pro 100 g: Energie 1920 kJ, Eiweiß 20,0 g, Fett 20,0 g, Kohlenhydrate 48,0 g, Ballaststoffe 3,0 g, Natrium 550 mg, Vitamin A 485 IE gRE, Vitamin D 8,6 µg, Vitamin E 11,35 mg -TE, Vitamin B 0,95 mg, Vitamin C 45,8 mg, Folsäure 285 IE gDFE, Calcium 650 mg, Zink 8,9 mg, Selen 5,56 mg, γ-Linolensäure 24,4 µg, Taurin 3,0 g.",
+  usageRu: "1. Налейте в чашку тёплую воду (~60°C). 2. Добавьте необходимое количество сухого молока. 3. Тщательно перемешайте до полного растворения. 4. Готово к употреблению. Пейте как можно скорее после приготовления. После открытия упаковки рекомендуется употребить в течение двух недель.",
+  usageDe: "1. Gießen Sie warmes Wasser (ca. 60°C) in eine Tasse. 2. Geben Sie die benötigte Menge Milchpulver hinzu. 3. Gründlich umrühren, bis das Pulver vollständig aufgelöst ist. 4. Sofort nach der Zubereitung trinken. Nach dem Öffnen innerhalb von zwei Wochen aufbrauchen."
+  }, 
+  {
     id: 17,
     nameRu: "Антибактериальный гель для стирки с экстрактом бамбука 1 кг",
     nameDe: "Antibakterielles Waschgel mit Bambusextrakt 1 kg",
@@ -57,6 +99,34 @@ const products = [
     fullDe: "Antibakterielles Waschmittel mit Bambusextrakt wurde speziell für effektive Reinigung und Schutz Ihrer Kleidung entwickelt. Die Formel mit Tensiden, Bambusextrakt, Wasser, Reinigungsfaktoren und Duftstoffen entfernt effektiv Schmutz und Bakterien und pflegt die Fasern. Die konzentrierte Zusammensetzung bietet antibakteriellen Schutz und verleiht der Kleidung Frische und Reinheit. Die Dosierungstabelle erleichtert die Anwendung und macht das Produkt sparsam im Verbrauch. Zusammensetzung: Tenside, Bambusextrakt, Wasser, Reinigungsfaktoren, Duftstoffe.",
     usageRu: "Добавьте средство в отсек для стирального порошка в зависимости от количества белья. Используйте согласно инструкции на упаковке.",
     usageDe: "Geben Sie das Mittel je nach Wäschemenge in das Waschmittelfach. Anwendung gemäß den Angaben auf der Verpackung."
+  },
+  {
+  id: 24,
+  nameRu: "Чай из кукурузных рылец 150 г",
+  nameDe: "Tee aus Maisbart 150 g",
+  shortRu: "Натуральный чай для выведения жидкости и поддержки организма",
+  shortDe: "Natürlicher Tee zur Entwässerung und Körperunterstützung",
+  price: "460 ₽",
+  article: "00000000CST024",
+  image: "https://imgur.com/A01gtC8.png",
+  fullRu: "Чай изготовлен на основе кукурузных рыльцев и не содержит добавок или сахара, что делает его идеальным для здорового образа жизни. Подходит для употребления на голодный желудок или ночью. Обладает мочегонными свойствами, способствует выведению лишней жидкости. Кукурузные рыльца богаты витамином Е, винной кислотой и другими полезными веществами. Чай поддерживает сбалансированное питание и основан на традициях китайской медицины. В упаковке 30 пакетиков по 5 г (всего 150 г). Состав: кукуруза, гречиха татарская, кукурузные рыльца, лопух большой, корень пуэрарии волосистой, гардения жасминовидная.",
+  fullDe: "Tee aus Maisbart basiert auf Maisnarben und enthält weder Zusätze noch Zucker – ideal für eine gesunde Lebensweise. Der Tee kann auf nüchternen Magen oder nachts getrunken werden. Er besitzt harntreibende Eigenschaften und hilft, überschüssige Flüssigkeit aus dem Körper auszuleiten. Maisbart ist reich an Vitamin E, Weinsäure und anderen wertvollen Stoffen. Der Tee unterstützt eine ausgewogene Ernährung und basiert auf der traditionellen chinesischen Medizin. In der Packung befinden sich 30 Beutel à 5 g (insgesamt 150 g). Zutaten: Mais, Tartarbuchweizen, Maisbart, große Klette, Pueraria lobata Wurzel, Gardenia jasminoides.",
+  usageRu: "Заварите 1 пакетик (5 г) в 200 мл горячей воды, настаивайте 5–10 минут. Пейте в любое время дня.",
+  usageDe: "Einen Beutel (5 g) mit 200 ml heißem Wasser aufgießen, 5–10 Minuten ziehen lassen. Zu jeder Tageszeit genießen."
+  },
+  {
+  id: 25,
+  nameRu: "Массажная подушка из натурального латекса",
+  nameDe: "Massagekissen aus Naturlatex",
+  shortRu: "Эргономичная подушка для поддержки шеи и расслабления",
+  shortDe: "Ergonomisches Kissen zur Nackenstütze und Entspannung",
+  price: "3689 ₽",
+  article: "00000000LAT025",
+  image: "https://imgur.com/fzFaHf9.png",
+  fullRu: "Размеры: 58 × 35 см, высота 10–12 см. Материал — натуральный латекс, импортирован из Таиланда. В процессе производства латекс вспенивается и принимает форму, образуя отверстия, пузыри и мелкие дефекты, что подтверждает подлинность материала. Натуральный латекс гарантирует оптимальную поддержку и долговечность. Эта массажная подушка обеспечивает максимальное удобство и расслабление, поддерживает правильную форму шеи и спины во время сна или отдыха.",
+  fullDe: "Maße: 58 × 35 cm, Höhe 10–12 cm. Material: Naturlatex, importiert aus Thailand. Während des Herstellungsprozesses wird der Latex aufgeschäumt und geformt, was zur Bildung von unregelmäßigen Löchern, Blasen und kleinen Unvollkommenheiten führt, die die Echtheit des Naturlatex bestätigen. Das Material garantiert optimale Unterstützung und Langlebigkeit. Dieses Massagekissen sorgt für maximalen Komfort und Entspannung und unterstützt Nacken und Rücken während des Schlafs oder der Erholung.",
+  usageRu: "Используйте подушку для сна или отдыха для поддержки шеи и расслабления мышц.",
+  usageDe: "Verwenden Sie das Kissen beim Schlafen oder Ausruhen zur Unterstützung des Nackens und zur Entspannung der Muskulatur."
   },
   {
     id: 16,
