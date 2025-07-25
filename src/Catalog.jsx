@@ -725,6 +725,25 @@ body, .bg-green-50 { background: #e9faee !important; }
   position: sticky; top: 0; z-index: 10; width: 100%;
   display: flex; flex-direction: column; align-items: stretch; padding: 0;
 }
+.catalog-cat-btn {
+  font-size: 17px;
+  border-radius: 22px;
+  border: 2px solid #30bc6c;
+  background: none;
+  padding: 6px 22px;
+  transition: all 0.16s;
+  color: #30bc6c;
+  font-weight: 600;
+  cursor: pointer;
+  /* --- Добавь это --- */
+  max-width: 90vw;       /* не шире 90% экрана, чтобы кнопки не вылезали */
+  min-width: 120px;      /* чтобы совсем короткие не были узкими */
+  white-space: normal;   /* разрешает перенос слов */
+  text-align: center;
+  word-break: break-word; /* переносить длинные слова */
+  flex: 1 1 170px;       /* растягивать, но базово 170px */
+  box-sizing: border-box;
+}
 .catalog-header-row {
   display: flex; align-items: center; justify-content: space-between;
   max-width: 1100px; margin: 0 auto; padding: 12px 10px 4px 10px; min-height: 72px;
