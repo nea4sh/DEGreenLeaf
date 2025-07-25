@@ -770,6 +770,13 @@ body, .bg-green-50 { background: #e9faee !important; }
 .catalog-cat-btn.active {
   background: #30bc6c; color: #fff; border-color: #23a45a;
 }
+.catalog-card-title, .catalog-card-desc {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  min-width: 0;
+  width: 100%;
+}
 .catalog-products {
   margin: 0 auto;
   display: grid;
