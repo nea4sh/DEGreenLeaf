@@ -719,32 +719,33 @@ export default function Catalog() {
     <div>
       {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
     <style>{`
+/* Общий фон */
 body, .bg-green-50 {
   background: #e9faee !important;
 }
 
+/* --- Шапка --- */
 .catalog-header {
   background: #fff;
   box-shadow: 0 3px 10px 0 rgba(60,90,70,0.04);
   position: sticky;
   top: 0;
   z-index: 10;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 0;
 }
+
+/* Внутри шапки: флаги, логотип, поисковая иконка + корзина */
 .catalog-header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 12px 10px 4px 10px;
-  min-height: 72px;
+  padding: 12px 10px;
 }
-.catalog-flags { display: flex; gap: 7px; }
+.catalog-flags {
+  display: flex;
+  gap: 7px;
+}
 .catalog-flag-btn {
   background: none;
   border: none;
@@ -759,15 +760,22 @@ body, .bg-green-50 {
   align-items: center;
   justify-content: center;
 }
-.catalog-flag-btn.active { border: 2px solid #30bc6c; }
+.catalog-flag-btn.active {
+  border-color: #30bc6c;
+}
+
 .catalog-logo {
   max-height: 90px;
   max-width: 330px;
   object-fit: contain;
-  background: transparent;
-  margin: 0;
+  margin: 0 auto;
 }
-.catalog-header-actions { display: flex; align-items: center; gap: 16px; }
+
+.catalog-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 .catalog-search {
   display: flex;
   align-items: center;
@@ -784,8 +792,16 @@ body, .bg-green-50 {
   width: 130px;
   min-width: 0;
 }
-.catalog-cart-btn { background: none; border: none; padding: 0; position: relative; }
-.catalog-cart-img { width: 38px; height: 38px; }
+.catalog-cart-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+.catalog-cart-img {
+  width: 38px;
+  height: 38px;
+}
 .catalog-cart-count {
   position: absolute;
   top: -5px;
@@ -799,14 +815,35 @@ body, .bg-green-50 {
   text-align: center;
 }
 
+/* --- Мобильная шапка: всё по центру и в колонку --- */
+@media (max-width: 600px) {
+  .catalog-header-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+  .catalog-flags {
+    justify-content: center;
+    width: 100%;
+  }
+  .catalog-search {
+    width: 100%;
+    max-width: none;
+  }
+  .catalog-header-actions {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 /* -- КАТЕГОРИИ -- */
 .catalog-categories {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px 7px;
-  padding: 12px 0 5px 0;
-  background: none;
+  padding: 12px 0 5px;
 }
 .catalog-cat-btn {
   font-size: 17px;
@@ -832,7 +869,7 @@ body, .bg-green-50 {
   border-color: #23a45a;
 }
 
-/* --- КАРТОЧКИ (обновлено) --- */
+/* --- КАРТОЧКИ ТОВАРОВ: 3 в ряд на десктопе, 2 в ряд на любом мобиле --- */
 .catalog-products {
   margin: 0 auto;
   display: flex;
@@ -922,7 +959,7 @@ body, .bg-green-50 {
   color: #fff;
 }
 
-/* --- АДАПТИВ --- */
+/* --- Адаптив: 2 карточки в ряд от планшета до любого мобильного --- */
 @media (max-width: 950px) {
   .catalog-card {
     flex: 1 1 calc((100% - 26px) / 2);
@@ -930,11 +967,11 @@ body, .bg-green-50 {
 }
 @media (max-width: 600px) {
   .catalog-card {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex: 1 1 calc((100% - 10px) / 2);
   }
 }
 `}</style>
+
 
 
 
