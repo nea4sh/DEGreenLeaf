@@ -736,45 +736,6 @@ body, .bg-green-50 { background: #e9faee !important; }
   transition: border 0.2s; width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
 }
-.catalog-products {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr; /* <--- добавь это */
-  max-width: 1100px;
-  gap: 26px;
-  padding: 0 12px;
-}
-@media (max-width: 950px) {
-  .catalog-products { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .catalog-header-row { flex-direction: column; gap: 10px; }
-  .catalog-logo { max-width: 160px; max-height: 60px; }
-  .catalog-products { gap: 11px; grid-template-columns: repeat(2, 1fr); }
-  .catalog-card { padding: 12px 7px 13px 7px; min-height: 330px; }
-  .catalog-card img { max-width: 64px; max-height: 64px; }
-}
-.catalog-card-title {
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 3px;
-  min-height: 50px;    /* Добавь: */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.catalog-card-desc {
-  font-size: 15px;
-  text-align: center;
-  margin-bottom: 8px;
-  color: #5d675d;
-  min-height: 34px;    /* Можешь увеличить если нужно */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .catalog-flag-btn.active { border: 2px solid #30bc6c; }
 .catalog-logo {
   max-height: 90px; max-width: 330px; object-fit: contain; background: transparent; margin: 0;
@@ -809,6 +770,27 @@ body, .bg-green-50 { background: #e9faee !important; }
 .catalog-cat-btn.active {
   background: #30bc6c; color: #fff; border-color: #23a45a;
 }
+.catalog-products {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  max-width: 1100px;
+  gap: 26px;
+  padding: 0 12px;
+}
+.catalog-products > .catalog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.catalog-card {
+  background: #fff; border-radius: 18px; box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
+  padding: 20px 16px 18px 16px; display: flex; flex-direction: column;
+  align-items: center; transition: box-shadow 0.2s; margin-top: 0;
+  min-height: 370px; position: relative; height: 100%;
+}
+.catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
 .catalog-card-title, .catalog-card-desc {
   word-break: break-word;
   overflow-wrap: break-word;
@@ -816,22 +798,18 @@ body, .bg-green-50 { background: #e9faee !important; }
   min-width: 0;
   width: 100%;
 }
-.catalog-products {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1100px;
-  gap: 26px;
-  padding: 0 12px;
+.catalog-card-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 3px;
+  min-height: 50px;
+  display: flex; align-items: center; justify-content: center;
 }
-.catalog-card {
-  background: #fff; border-radius: 18px; box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
-  padding: 20px 16px 18px 16px; display: flex; flex-direction: column;
-  align-items: center; transition: box-shadow 0.2s; margin-top: 0; min-height: 370px; position: relative;
+.catalog-card-desc {
+  font-size: 15px; text-align: center; margin-bottom: 8px; color: #5d675d;
+  min-height: 34px; display: flex; align-items: center; justify-content: center;
 }
-.catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
-.catalog-card-title { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 3px; }
-.catalog-card-desc { font-size: 15px; text-align: center; margin-bottom: 8px; color: #5d675d; min-height: 34px; }
 .catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
 .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
 .catalog-card-btns { display: flex; gap: 10px; width: 100%; justify-content: center; }
@@ -850,6 +828,7 @@ body, .bg-green-50 { background: #e9faee !important; }
   .catalog-card img { max-width: 64px; max-height: 64px; }
 }
 `}</style>
+
 
 
 
