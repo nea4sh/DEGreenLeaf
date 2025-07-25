@@ -19,11 +19,7 @@ const products = [
   "usageRu": "Наносить на чистую и сухую кожу подмышек утром или по мере необходимости. Не использовать на раздражённой или повреждённой коже.",
   "usageDe": "Auf saubere, trockene Achselhaut morgens oder bei Bedarf auftragen. Nicht auf gereizter oder verletzter Haut anwenden.",
   "usageEn": "Apply to clean, dry underarms in the morning or as needed. Do not apply to irritated or broken skin.",
-  "category": {
-    "code": "personalcare",
-    "ru": "Личная гигиена",
-    "de": "Körperhygiene",
-    "en": "Personal Hygiene"
+  "category": "personalcare"
   }
 },
 {
@@ -43,11 +39,7 @@ const products = [
   "usageRu": "Наносить на влажную кожу лица и тела, вспенить, помассировать и смыть водой. Использовать утром и вечером.",
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen. Morgens und abends verwenden.",
   "usageEn": "Apply to wet skin on face and body, lather, massage gently, and rinse with water. Use morning and evening.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -67,11 +59,7 @@ const products = [
   "usageRu": "После очищения и тонизирования кожи нанести необходимое количество геля на ладонь, равномерно распределить по лицу и мягко массировать до полного впитывания.",
   "usageDe": "Nach der Reinigung und Tonisierung eine geeignete Menge auftragen, gleichmäßig verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
   "usageEn": "After cleansing and toning the skin, apply an appropriate amount of gel to the palm, spread evenly over the face, and gently massage until fully absorbed.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -91,11 +79,7 @@ const products = [
   "usageRu": "Нанести на влажную кожу, вспенить, промассировать и смыть водой.",
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen.",
   "usageEn": "Apply to wet skin, lather, massage gently, and rinse with water.",
-  "category": {
-    "code": "bodycare",
-    "ru": "Уход за кожей тела",
-    "de": "Körperpflege",
-    "en": "Body Care"
+  "category": "bodycare"
   }
 },
 {
@@ -115,11 +99,7 @@ const products = [
   "usageRu": "Распылите на сухую одежду, оставьте на 3–5 минут, затем стирайте вручную или в машине.",
   "usageDe": "Auf trockene Kleidung sprühen, 3–5 Minuten einwirken lassen, dann per Hand oder Maschine waschen.",
   "usageEn": "Spray onto dry clothing, leave for 3–5 minutes, then wash by hand or machine.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -139,11 +119,7 @@ const products = [
   "usageRu": "Нанести мыло на влажную ткань, потереть, затем тщательно промыть водой.",
   "usageDe": "Seife auf feuchten Stoff auftragen, reiben und gründlich mit Wasser abspülen.",
   "usageEn": "Apply soap to damp fabric, rub, then rinse thoroughly with water.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -163,11 +139,7 @@ const products = [
   "usageRu": "Ручная стирка: 10–20 мл на 3–5 л воды. Машинная: 25–30 мл на 8–10 предметов одежды.",
   "usageDe": "Handwäsche: 10–20 ml auf 3–5 l Wasser. Maschinenwäsche: 25–30 ml für 8–10 Teile.",
   "usageEn": "Hand wash: 10–20 ml per 3–5 L of water. Machine wash: 25–30 ml for 8–10 pieces of clothing.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -187,11 +159,7 @@ const products = [
   "usageRu": "Добавьте средство согласно таблице дозировки на упаковке. Подходит для ручной и машинной стирки. Хранить в недоступном для детей месте.",
   "usageDe": "Dosierung gemäß Tabelle auf der Verpackung. Für Hand- und Maschinenwäsche geeignet. Von Kindern fernhalten.",
   "usageEn": "Use dosage as indicated on the package. Suitable for both hand and machine washing. Keep out of reach of children.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -211,11 +179,7 @@ const products = [
   "usageRu": "Снимите пленку, откройте крышку, поместите в холодильник. Не помещать в морозильную камеру. Заменять каждые 2–3 месяца.",
   "usageDe": "Folie entfernen, Deckel öffnen und in den Kühlschrank stellen. Nicht ins Gefrierfach legen. Alle 2–3 Monate austauschen.",
   "usageEn": "Remove film, open the lid, and place in the refrigerator. Do not place in the freezer. Replace every 2–3 months.",
-  "category": {
-    "code": "ecohome",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+  "category": "ecohome"
   }
 },
 {
@@ -235,11 +199,7 @@ const products = [
   "usageRu": "Нанесите на губку или растворите в воде. После мытья тщательно смыть водой.",
   "usageDe": "Auf einen Schwamm auftragen oder in Wasser verdünnen. Danach gründlich mit Wasser abspülen.",
   "usageEn": "Apply to a sponge or dilute in water. Rinse thoroughly with water after washing.",
-  "category": {
-    "code": "ecohome",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+  "category": "ecohome"
   }
 },
 {
@@ -259,11 +219,7 @@ const products = [
   "usageRu": "Распылить на загрязнение, оставить на 3–5 минут, протереть тканью/губкой и смыть водой.",
   "usageDe": "Auf die Verschmutzung sprühen, 3–5 Minuten einwirken lassen, mit Tuch/Schwamm abwischen und mit Wasser abspülen.",
   "usageEn": "Spray on the stain, leave for 3–5 minutes, wipe with a cloth or sponge, and rinse with water.",
-  "category": {
-    "code": "ecohome",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+  "category": "ecohome"
   }
 },
 {
@@ -283,11 +239,7 @@ const products = [
   "usageRu": "Распылить на поверхность, оставить на несколько секунд и вытереть. Для фруктов/овощей: распылить, 1–2 мин подождать и тщательно смыть.",
   "usageDe": "Aufsprühen, einige Sekunden einwirken lassen und abwischen. Für Obst/Gemüse: aufsprühen, 1–2 Minuten warten und gründlich abspülen.",
   "usageEn": "Spray onto surface, wait a few seconds, then wipe clean. For fruits/vegetables: spray, wait 1–2 minutes, then rinse thoroughly.",
-  "category": {
-    "code": "ecohome",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+  "category": "ecohome"
   }
 },
 {
@@ -307,11 +259,7 @@ const products = [
   "usageRu": "Не намокайте упаковку и остатки ткани. Перед применением на дорогой утвари протестируйте на незаметном участке. При попадании в глаза промыть водой. Хранить вдали от детей и животных.",
   "usageDe": "Vermeiden Sie das Befeuchten der Verpackung und der restlichen Tücher. Bei empfindlichem Geschirr zuerst testen. Bei Augenkontakt mit Wasser spülen. Von Kindern und Tieren fernhalten.",
   "usageEn": "Avoid wetting the packaging and remaining cloths. Test on inconspicuous areas of valuable utensils first. Rinse thoroughly with water in case of eye contact. Keep out of reach of children and pets.",
-  "category": {
-    "code": "ecohome",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+  "category": "ecohome"
   }
 },
 {
@@ -331,11 +279,7 @@ const products = [
   "usageRu": "Достаньте салфетку и протрите загрязнённую поверхность. После применения при необходимости смойте водой.",
   "usageDe": "Ein Tuch entnehmen und die verschmutzte Fläche abwischen. Bei Bedarf mit Wasser nachspülen.",
   "usageEn": "Take a wipe and clean the dirty surface. Rinse with water after use if necessary.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -355,11 +299,7 @@ const products = [
   "usageRu": "Добавьте гель в отсек для моющих средств в стиральной машине. Следуйте дозировке на упаковке в зависимости от степени загрязнения и объема белья.",
   "usageDe": "Geben Sie das Gel in das Waschmittelfach der Waschmaschine. Dosierung je nach Verschmutzungsgrad und Wäschemenge gemäß Verpackungsempfehlung.",
   "usageEn": "Add the gel to the detergent compartment of your washing machine. Follow the dosage instructions on the packaging based on the level of soiling and laundry load.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -379,11 +319,7 @@ const products = [
   "usageRu": "Добавьте средство в отсек для стирального порошка в зависимости от количества белья. Используйте согласно инструкции на упаковке.",
   "usageDe": "Geben Sie das Mittel je nach Wäschemenge in das Waschmittelfach. Anwendung gemäß den Angaben auf der Verpackung.",
   "usageEn": "Add the gel to the detergent compartment depending on laundry amount. Use according to instructions on the package.",
-  "category": {
-    "code": "ecolaundry",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+  "category": "ecolaundry"
   }
 },
 {
@@ -403,11 +339,7 @@ const products = [
   "usageRu": "Для ручной стирки – растворите 20 мл в 3–5 л воды, замочите на 10 минут, ополосните. Для машинной – добавьте нужное количество и выберите деликатный режим.",
   "usageDe": "Handwäsche: 20 ml auf 3–5 l Wasser, 10 Min einweichen, ausspülen. Maschine: passende Menge hinzufügen und Schonwaschgang wählen.",
   "usageEn": "For hand washing: dissolve 20 ml in 3–5 liters of water, soak for 10 minutes, rinse well. For machine washing: add the required amount and select the delicate cycle.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -427,11 +359,7 @@ const products = [
   "usageRu": "Наклеить на область холки на сухую и чистую кожу. Оставить на 6–12 часов. Применять курсами. Избегать попадания на открытые раны.",
   "usageDe": "Auf trockene, saubere Haut im Nackenbereich kleben. 6–12 Stunden einwirken lassen. Kurenweise anwenden. Kontakt mit offenen Wunden vermeiden.",
   "usageEn": "Apply to clean, dry skin on the neck area. Leave on for 6–12 hours. Use in courses. Avoid contact with open wounds.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -451,11 +379,7 @@ const products = [
   "usageRu": "Наносить на проблемные зоны легкими массирующими движениями 2–3 раза в день.",
   "usageDe": "Auf die betroffenen Stellen 2–3 Mal täglich mit leichten, massierenden Bewegungen auftragen.",
   "usageEn": "Apply to problem areas with light massage movements 2–3 times a day.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -471,11 +395,7 @@ const products = [
   "fullDe": "Probiotisches Getränk mit Präbiotika und Spirulina unterstützt Verdauung und Immunität. Enthält Probiotika, Präbiotika, Spirulina, Vitamine und Mineralstoffe. Fördert die Darmgesundheit, Energie und Abwehrkräfte.",
   "usageRu": "Растворите пакетик в 100 мл воды, принимайте 1–2 раза в день.",
   "usageDe": "Einen Beutel in 100 ml Wasser auflösen, 1–2 Mal täglich einnehmen.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -491,11 +411,7 @@ const products = [
   "fullDe": "Das Getränk wird für Menschen empfohlen, die einen erhöhten Mineralstoffbedarf haben, um ein normales Energieniveau, die Gesundheit von Knochen, Nervensystem und Immunschutz zu unterstützen. Eigenschaften des Getränks: ✔️ Unterstützung der Gesundheit von Knochen und Zähnen ✔️ Regulierung des Nervensystems ✔️ Unterstützung des Immunsystems ✔️ Energieunterstützung ✔️ Verbesserung des Hautzustands ✔️ Unterstützung des Herz-Kreislauf-Systems ✔️ Verringerung von Muskel- und Gelenkschmerzen. Magnesium – 230 mg, Calcium – 1800 mg, Zink – 16 mg.",
   "usageRu": "Откройте пакет и сразу употребляйте. Рекомендуемая дозировка — 2 пакета в день.",
   "usageDe": "Beutel öffnen und sofort trinken. Empfohlene Dosierung: 2 Beutel pro Tag.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -511,11 +427,7 @@ const products = [
   "fullDe": "Nilrich Kamelmilchpulver ist mit Probiotika für optimale Ernährung und Gesundheit angereichert. Hergestellt aus hochwertiger Weidemilch, angereichert mit Präbiotika, verschiedenen Vitaminen und Mineralstoffen sowie aktiven Probiotika. Das Produkt wird mit modernen Technologien gereinigt, hat eine gute Löslichkeit und einen milden Geschmack. Zutaten: Rohes Kamelmilchpulver oder Vollkamelmilchpulver, entsalzenes Molkenpulver, Isomaltooligosaccharid, Molkenproteinkonzentrat, Inulin (3 g/100 g), γ-Linolensäure (3 g/100 g), Vitamine (A, D, E, B, C), Folsäure, Eisenpyrophosphat, Zinkoxid, Natrium, Calciumcarbonat, Taurin, Probiotika (Bifidobacterium Lactis, Streptococcus thermophilus). Nährwertangaben pro 100 g: Energie 1920 kJ, Eiweiß 20,0 g, Fett 20,0 g, Kohlenhydrate 48,0 g, Ballaststoffe 3,0 g, Natrium 550 mg, Vitamin A 485 IE gRE, Vitamin D 8,6 µg, Vitamin E 11,35 mg -TE, Vitamin B 0,95 mg, Vitamin C 45,8 mg, Folsäure 285 IE gDFE, Calcium 650 mg, Zink 8,9 mg, Selen 5,56 mg, γ-Linolensäure 24,4 µg, Taurin 3,0 g.",
   "usageRu": "1. Налейте в чашку тёплую воду (~60°C). 2. Добавьте необходимое количество сухого молока. 3. Тщательно перемешайте до полного растворения. 4. Готово к употреблению. Пейте как можно скорее после приготовления. После открытия упаковки рекомендуется употребить в течение двух недель.",
   "usageDe": "1. Gießen Sie warmes Wasser (ca. 60°C) in eine Tasse. 2. Geben Sie die benötigte Menge Milchpulver hinzu. 3. Gründlich umrühren, bis das Pulver vollständig aufgelöst ist. 4. Sofort nach der Zubereitung trinken. Nach dem Öffnen innerhalb von zwei Wochen aufbrauchen.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -531,11 +443,7 @@ const products = [
   "fullDe": "Tee aus Maisbart basiert auf Maisnarben und enthält weder Zusätze noch Zucker – ideal für eine gesunde Lebensweise. Der Tee kann auf nüchternen Magen oder nachts getrunken werden. Er besitzt harntreibende Eigenschaften und hilft, überschüssige Flüssigkeit aus dem Körper auszuleiten. Maisbart ist reich an Vitamin E, Weinsäure und anderen wertvollen Stoffen. Der Tee unterstützt eine ausgewogene Ernährung und basiert auf der traditionellen chinesischen Medizin. In der Packung befinden sich 30 Beutel à 5 g (insgesamt 150 g). Zutaten: Mais, Tartarbuchweizen, Maisbart, große Klette, Pueraria lobata Wurzel, Gardenia jasminoides.",
   "usageRu": "Заварите 1 пакетик (5 г) в 200 мл горячей воды, настаивайте 5–10 минут. Пейте в любое время дня.",
   "usageDe": "Einen Beutel (5 g) mit 200 ml heißem Wasser aufgießen, 5–10 Minuten ziehen lassen. Zu jeder Tageszeit genießen.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -551,11 +459,7 @@ const products = [
   "fullDe": "Maße: 58 × 35 cm, Höhe 10–12 cm. Material: Naturlatex, importiert aus Thailand. Während des Herstellungsprozesses wird der Latex aufgeschäumt und geformt, was zur Bildung von unregelmäßigen Löchern, Blasen und kleinen Unvollkommenheiten führt, die die Echtheit des Naturlatex bestätigen. Das Material garantiert optimale Unterstützung und Langlebigkeit. Dieses Massagekissen sorgt für maximalen Komfort und Entspannung und unterstützt Nacken und Rücken während des Schlafs oder der Erholung.",
   "usageRu": "Используйте подушку для сна или отдыха для поддержки шеи и расслабления мышц.",
   "usageDe": "Verwenden Sie das Kissen beim Schlafen oder Ausruhen zur Unterstützung des Nackens und zur Entspannung der Muskulatur.",
-  "category": {
-    "code": "health",
-    "ru": "Здоровье",
-    "de": "Gesundheit",
-    "en": "Health"
+  "category": "health"
   }
 },
 {
@@ -571,11 +475,7 @@ const products = [
   "fullDe": "Diese tief feuchtigkeitsspendende Creme ist mit Peptiden und Pflanzenextrakten angereichert, die eine intensive Durchfeuchtung der Haut fördern. Die Formel sorgt dafür, dass Feuchtigkeit in die tieferen Hautschichten transportiert wird und jede Schicht optimal hydratisiert bleibt. Die Creme macht die Haut elastischer, straffer und sichtbar frischer. Inhaltsstoffe: Wasser, Glycerin, Kokos-Caprylsäure/Caprinsäure-Ester, Butylenglykol, Kokosöl, Polyethylenglykol-8, Dioctylether, Avocadoöl, Macadamianussöl, Isononylisononanoat, Cetylalkohol, Palmitoyltetrapeptid-7, Palmitoyltripeptid-1, Natriumhyaluronat, Natriumpolyacrylat, Alkane C18-21, Trideceth-6, Hydroxyethylacrylat/Acryloyldimethyltaurat-Natrium-Copolymer, Squalan, Tremella-Fuciformis-Extrakt, Polysorbat-60, Steareth-21, Xanthan, Glycerylstearat, β-Glucan, Dinatrium-EDTA, Ethylhexylglycerin, Phenoxyethanol, Limonia-acidissima-Extrakt, Bambusblatt-Extrakt, Chlorphenesin, Caprylylglykol, Polyacrylsäure, Polysorbat-20, Oldenlandia-diffusa-Extrakt, Lonicera-caprifolium-Extrakt.",
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи утром и вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge der Creme morgens und abends nach der Reinigung und Tonisierung auf Gesicht und Hals auf. Sanft einmassieren, bis sie vollständig eingezogen ist.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -591,11 +491,7 @@ const products = [
   "fullDe": "Diese Creme enthält Essenzen und Pflanzenextrakte für eine tiefe Feuchtigkeitsversorgung und Nährung der Haut. Acetylhexapeptid-1 stimuliert die Kollagenproduktion, glättet Falten und stärkt die Hautfestigkeit. Die Polysaccharid-Essenz sorgt für sofortigen Lifting-Effekt und verbessert die Feuchtigkeitsbindung. Angereichert mit Arginin/Lysin-Peptiden, Pfirsichgummi-Essenz und Schneckengift, bietet die Creme Regeneration, Schutz, Faltenglättung und intensive Pflege. Die regelmäßige Anwendung macht die Haut elastisch, glatt und strahlend. Perfekt für die nächtliche Hautpflege und Regeneration während des Schlafs.",
   "usageRu": "Наносите крем на лицо и шею после очищения и тонизирования вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung auf Gesicht und Hals auftragen. Sanft einmassieren, bis die Creme vollständig eingezogen ist.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -611,11 +507,7 @@ const products = [
   "fullDe": "Diese Nachtcreme ist mit aktiven Inhaltsstoffen angereichert und spendet intensive Feuchtigkeit, reduziert Falten und verbessert die Hautstruktur. Enthält Sheabutter, Caesalpinia Spinosa-Gummi, Oligopeptid-6, Buchenknospenextrakt, Gelée Royale, Ceramid NP, Natriumhyaluronat, Boswellia-Extrakt, Traubenextrakt, Centella Asiatica und Meeresalgen. Durch die Kombination von Mineralien, Vitaminen, Hyaluronsäure, Ceramiden und natürlichen Extrakten wird die Haut intensiv genährt, regeneriert und ihre Elastizität gefördert. Die leichte Textur zieht schnell ein, ohne zu kleben. Angenehmer Duft nach Melone, Meeresbrise, Blumen und Moschus. Ideal für die tägliche abendliche Anwendung.",
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -631,11 +523,7 @@ const products = [
   "fullDe": "Das verjüngende Tonikum ist ein Elixier der Jugend für Ihre Haut, das die Kraft der Natur mit innovativer Forschung vereint. Tremella, auch als „Trüffelpilz“ bekannt, spendet intensive Feuchtigkeit, wirkt wie Hyaluronsäure und schützt vor freien Radikalen. Perlenpeptide fördern die Regeneration und unterstützen die Hautelastizität. Ätherische Öle nähren die Haut, während Vitamin E aktiv oxidativen Stress bekämpft. Centella Asiatica regt die Kollagensynthese an und beschleunigt die Heilung. Dieser Toner ist nicht nur Pflege, sondern ein effektives Mittel gegen Hautalterung.",
   "usageRu": "Нанесите тонер на очищенную кожу лица и шеи с помощью ватного диска или ладонями. Используйте утром и вечером перед нанесением крема.",
   "usageDe": "Tragen Sie das Tonikum morgens und abends nach der Reinigung mit einem Wattepad oder den Händen auf Gesicht und Hals auf. Anschließend Creme verwenden.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -651,11 +539,7 @@ const products = [
   "fullDe": "Das Serum ist mit konzentrierten Probiotika angereichert und bietet eine intensive Pflege zur Regeneration und Wiederherstellung der Haut. Probiotika stärken das natürliche Hautmikrobiom, während fermentierter Sojamilch-Filtrat die Haut mit Nährstoffen versorgt. Inulin und α-Glucan-Oligosaccharid wirken als Präbiotika und verbessern die Textur und Feuchtigkeit der Haut. Niacinamid erhöht die Elastizität und verleiht der Haut Strahlkraft. 4D-Natriumhyaluronat sorgt für langanhaltende, mehrschichtige Feuchtigkeit. Geeignet für alle Hauttypen.",
   "usageRu": "Нанесите небольшое количество сыворотки на очищенную кожу лица и шеи утром и/или вечером. Аккуратно распределите до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge des Serums morgens und/oder abends nach der Reinigung auf Gesicht und Hals auf und massieren Sie es sanft ein.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -671,11 +555,7 @@ const products = [
   "fullDe": "Die intensiv feuchtigkeitsspendende Perlencreme von SEALUXE vereint die Kraft von hydrolysiertem Perlenextrakt, Hyaluronsäure, Chrysanthemenextrakt und Betain für eine umfassende Pflege. Hydrolysiertes Perlenextrakt stärkt die Haut, gleicht den Hautton aus und verleiht Strahlkraft, während Hyaluronsäure tief hydratisiert und Falten reduziert. Chrysanthemenextrakt bietet Schutz vor freien Radikalen und Entzündungen, sorgt für einen ebenmäßigen Teint. Betain spendet Feuchtigkeit und macht auch trockene oder empfindliche Haut weich. Diese Creme ist der perfekte Abschluss der Pflege und verleiht jugendliche, glatte und strahlende Haut.",
   "usageRu": "После очищения и тонизирования нанесите небольшое количество крема на кожу лица и шеи. Равномерно распределите легкими массирующими движениями до полного впитывания. Используйте утром и/или вечером.",
   "usageDe": "Nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist. Morgens und/oder abends verwenden.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -691,11 +571,7 @@ const products = [
   "fullDe": "Die Augencreme von SEALUXE mit Proxylan und Hexapeptid-2 spendet intensive Feuchtigkeit und stärkt die Haut, ohne ein klebriges Gefühl zu hinterlassen. Die leicht gelbliche, milchige Konsistenz und der zarte Duft machen sie angenehm in der Anwendung. Bei regelmäßiger Nutzung werden feine Linien und Trockenheitsfältchen sichtbar gemildert, die Elastizität und Festigkeit der Augenpartie werden unterstützt.",
   "usageRu": "Нанесите небольшое количество крема на очищенную область вокруг глаз утром и вечером. Легкими похлопывающими движениями распределите до полного впитывания.",
   "usageDe": "Tragen Sie morgens und abends eine kleine Menge der Creme auf die gereinigte Augenpartie auf und klopfen Sie sie sanft ein, bis sie vollständig eingezogen ist.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -711,11 +587,7 @@ const products = [
   "fullDe": "Die Camellia-Ölessenz in praktischen Kapseln bewahrt die Frische, ist leicht aufzutragen und zieht schnell ein, ohne zu fetten. Die Formel mit Retinol, Vitamin E, Ceramid NP sowie pflanzlichen Ölen (Sonnenblumen-, Kamelien- und Sanddornöl) spendet intensiv Feuchtigkeit, verbessert die Elastizität, glättet feine Linien und sorgt für ein geschmeidiges, strahlendes Hautbild. Fünf niedermolekulare Peptide wirken straffend und regenerierend. Ideal zur täglichen Pflege für trockene und empfindliche Haut.",
   "usageRu": "После очищения кожи аккуратно открутите капсулу, равномерно распределите масло на лицо и помассируйте до полного впитывания.",
   "usageDe": "Nach der Reinigung eine Kapsel öffnen, das Öl gleichmäßig im Gesicht verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
 },
 {
@@ -731,11 +603,7 @@ const products = [
   "fullDe": "Die leichte Gesichtsmaske mit Kamelienextrakt spendet intensive Feuchtigkeit, beseitigt Trockenheit und verfeinert die Poren. 4D-Hyaluronat sorgt für Frische, Elastizität und ein strahlendes Hautbild. Die cremige Textur zieht schnell ein und verwöhnt die Haut mit wertvollen Pflanzenextrakten: Süßholzwurzel-, Rosmarinblatt-, Kamelien- und Ginsengwurzelextrakt, Sonnenblumenwachs, Kamillenblütenextrakt, Kokosöl, Avocado, Blütenmilch und mehr.",
   "usageRu": "На очищенную кожу лица нанесите маску равномерно, оставьте на 10–15 минут, затем удалите мягким полотенцем и смойте теплой водой.",
   "usageDe": "Nach der Reinigung großzügig auf das Gesicht auftragen, 10–15 Minuten einwirken lassen, dann mit einem weichen Tuch entfernen und mit warmem Wasser abspülen.",
-  "category": {
-    "code": "facecare",
-    "ru": "Уход за кожей лица",
-    "de": "Gesichtspflege",
-    "en": "Facial Care"
+  "category": "facecare"
   }
  }
 ];
@@ -776,7 +644,7 @@ function formatPrice(price, lang = "ru") {
       ru: "Цена по запросу",
       de: "Preis auf Anfrage",
       en: "Price on request"
-    }[lang];
+    }[lang];рррррррррррррр
   }
   const rub = Number(price.replace(/[^\d]/g, ""));
   if (isNaN(rub)) return price;
