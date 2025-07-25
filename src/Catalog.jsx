@@ -720,8 +720,9 @@ export default function Catalog() {
       {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
     <style>{`
 body, .bg-green-50 { background: #e9faee !important; }
+
 .catalog-header {
-  background: #fff; box-shadow: 0 3px 10px 0 rgba(60, 90, 70, 0.04);
+  background: #fff; box-shadow: 0 3px 10px 0 rgba(60,90,70,0.04);
   position: sticky; top: 0; z-index: 10; width: 100%;
   display: flex; flex-direction: column; align-items: stretch; padding: 0;
 }
@@ -740,9 +741,7 @@ body, .bg-green-50 { background: #e9faee !important; }
 .catalog-logo {
   max-height: 90px; max-width: 330px; object-fit: contain; background: transparent; margin: 0;
 }
-.catalog-header-actions {
-  display: flex; align-items: center; gap: 16px;
-}
+.catalog-header-actions { display: flex; align-items: center; gap: 16px; }
 .catalog-search {
   display: flex; align-items: center; background: #f3f7f4;
   border-radius: 20px; padding: 6px 15px; font-size: 17px;
@@ -799,9 +798,9 @@ body, .bg-green-50 { background: #e9faee !important; }
   padding: 0 12px;
 }
 .catalog-products > .catalog-card {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .catalog-card {
   background: #fff;
@@ -816,8 +815,6 @@ body, .bg-green-50 { background: #e9faee !important; }
   min-height: 370px;
   height: 100%;
   box-sizing: border-box;
-  /* Новое: делаем одинаковую высоту для мобильных и десктопа */
-  /* min-height уже есть, height: 100% держит сетку */
 }
 .catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
 .catalog-card-title {
@@ -825,30 +822,19 @@ body, .bg-green-50 { background: #e9faee !important; }
   font-size: 20px;
   text-align: center;
   margin-bottom: 3px;
-  min-height: 48px;
-  max-height: 56px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
   width: 100%;
+  word-break: break-word;
+  /* НЕ обрезаем! */
+  min-height: 48px;
 }
 .catalog-card-desc {
   font-size: 15px;
   text-align: center;
   margin-bottom: 8px;
   color: #5d675d;
-  min-height: 34px;
-  max-height: 38px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
   width: 100%;
+  word-break: break-word;
+  min-height: 34px;
 }
 .catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
 .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
@@ -867,36 +853,25 @@ body, .bg-green-50 { background: #e9faee !important; }
   .catalog-products { gap: 10px; grid-template-columns: repeat(2, 1fr); padding: 0 2vw;}
   .catalog-card {
     padding: 10px 5px 10px 5px;
-    min-height: 260px;
+    min-height: 220px;
     max-width: 98vw;
     width: 100%;
-    /* фиксированная одинаковая высота для мобильных, регулируй под свой контент */
-    height: 260px;
-    /* ! Важно: не трогать min-height выше, это “страховка” */
+    height: 100%;
+    box-sizing: border-box;
   }
   .catalog-card-title {
     font-size: 15px;
-    min-height: 32px;
-    max-height: 36px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-align: center;
-    word-break: break-word;
+    margin-bottom: 2px;
     width: 100%;
+    word-break: break-word;
+    min-height: 34px;
   }
   .catalog-card-desc {
     font-size: 12px;
-    min-height: 24px;
-    max-height: 34px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-align: center;
-    word-break: break-word;
+    margin-bottom: 6px;
     width: 100%;
+    word-break: break-word;
+    min-height: 24px;
   }
   .catalog-categories {
     gap: 5px 5px !important;
@@ -912,6 +887,7 @@ body, .bg-green-50 { background: #e9faee !important; }
   }
 }
 `}</style>
+
 
 
 
