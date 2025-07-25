@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 const products = [
   {
     id: 1,
+    category: "Личная гигиена"
     nameRu: "Шариковый дезодорант-антиперспирант",
     nameDe: "Roll-on Deodorant Antitranspirant",
     nameEn: "Roll-on Deodorant Antiperspirant",
@@ -23,27 +24,36 @@ const products = [
   // ... все твои товары!
 ];
 
-// Категории
+// --- Категории (можно дополнять)
 const categories = [
   { code: "deodorant", ru: "Дезодоранты", de: "Deodorants", en: "Deodorants" },
-  // можешь добавить еще...
+  { code: "Личная гигиена", ru: "Личная гигиена", de: "Körperhygiene", en: "Personal Hygiene" },
+  { code: "Уход за кожей лица", ru: "Уход за кожей лица", de: "Gesichtspflege", en: "Facial Care" },
+  { code: "Эко-средства для дома", ru: "Эко-средства для дома", de: "Öko-Haushaltsmittel", en: "Eco Home Products" },
+  { code: "Декоративная косметика", ru: "Декоративная косметика", de: "Dekorative Kosmetik", en: "Decorative Cosmetics" },
+  { code: "Уход за кожей тела", ru: "Уход за кожей тела", de: "Körperpflege", en: "Body Care" },
+  { code: "Уход для волос", ru: "Уход для волос", de: "Haarpflege", en: "Hair Care" },
+  { code: "Гигиена полости рта", ru: "Гигиена полости рта", de: "Mundhygiene", en: "Oral Hygiene" },
+  { code: "Товары для детей", ru: "Товары для детей", de: "Produkte für Kinder", en: "Products for Children" },
+  { code: "Здоровье", ru: "Здоровье", de: "Gesundheit", en: "Health" },
+  { code: "Эко-средства для стирки", ru: "Эко-средства для стирки", de: "Öko-Waschmittel", en: "Eco Laundry Products" },
 ];
 
-// Картинки флагов (PNG!)
+// --- Флаги PNG
 const FLAGS = {
   ru: "https://imgur.com/j2R2ynb.png",
   de: "https://imgur.com/z59SrMa.png",
   en: "https://imgur.com/QOgt3c2.png",
 };
 
-// Картинка корзины
+// --- Картинка корзины
 const basketImg = "https://imgur.com/gbChm8g.png";
 
-// Курсы валют
+// --- Курсы валют
 const RUBLE_TO_DOLLAR = 90;
 const RUBLE_TO_EURO = 98;
 
-// Формат цены
+// --- Формат цены
 function formatPrice(price, lang = "ru") {
   if (!price || typeof price !== "string" || price === "указать цену") {
     return {
@@ -59,7 +69,7 @@ function formatPrice(price, lang = "ru") {
   return `${rub.toLocaleString("ru-RU")} ₽ / ${dollar} $ / ${euro} €`;
 }
 
-// Языки
+// --- Языки
 const LANGS = [
   { code: "ru", img: FLAGS.ru, label: "Русский" },
   { code: "de", img: FLAGS.de, label: "Deutsch" },
@@ -72,7 +82,6 @@ export default function Catalog() {
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState(null);
   const [cartOpen, setCartOpen] = useState(false);
-  const [showSearchMobile, setShowSearchMobile] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
 
   // Категории (с "Без категории" если надо)
@@ -86,7 +95,7 @@ export default function Catalog() {
     []
   );
 
-  // Фильтрация товаров
+  // --- Фильтрация товаров
   const filteredProducts = useMemo(() => {
     let arr = products;
     if (activeCategory)
@@ -129,9 +138,6 @@ export default function Catalog() {
   function handleCategoryClick(cat) {
     setActiveCategory(cat);
   }
-  function toggleSearchMobile() {
-    setShowSearchMobile(s => !s);
-  }
 
   function sendTelegramMessage() {
     const counts = {};
@@ -160,87 +166,90 @@ export default function Catalog() {
 
   return (
     <div>
-      {/* Стили прямо здесь */}
+      {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
       <style>
         {`
         body, .bg-green-50 { background: #e9faee !important; }
         .catalog-header {
-          background: #fff;
-          box-shadow: 0 3px 10px 0 rgba(60, 90, 70, 0.04);
+          background: #fff; box-shadow: 0 3px 10px 0 rgba(60, 90, 70, 0.04);
           position: sticky; top: 0; z-index: 10; width: 100%;
           display: flex; flex-direction: column; align-items: stretch; padding: 0;
         }
         .catalog-header-row {
           display: flex; align-items: center; justify-content: space-between;
-          max-width: 1080px; margin: 0 auto; padding: 8px 10px 4px 10px; min-height: 60px;
+          max-width: 1100px; margin: 0 auto; padding: 12px 10px 4px 10px; min-height: 72px;
         }
-        .catalog-flags {
-          display: flex; gap: 7px;
-        }
+        .catalog-flags { display: flex; gap: 7px; }
         .catalog-flag-btn {
           background: none; border: none; padding: 0;
           outline: none; border-radius: 50%; border: 2px solid transparent;
-          transition: border 0.2s; width: 33px; height: 33px;
+          transition: border 0.2s; width: 38px; height: 38px;
           display: flex; align-items: center; justify-content: center;
         }
         .catalog-flag-btn.active { border: 2px solid #30bc6c; }
         .catalog-logo {
-          max-height: 50px; max-width: 140px; object-fit: contain; background: transparent; margin: 0;
+          max-height: 90px; max-width: 330px; object-fit: contain; background: transparent; margin: 0;
         }
         .catalog-header-actions {
           display: flex; align-items: center; gap: 16px;
         }
         .catalog-search {
           display: flex; align-items: center; background: #f3f7f4;
-          border-radius: 20px; padding: 4px 12px; font-size: 16px;
+          border-radius: 20px; padding: 6px 15px; font-size: 17px;
         }
         .catalog-search input {
           border: none; background: none; outline: none;
-          font-size: 16px; width: 120px; min-width: 0;
+          font-size: 17px; width: 130px; min-width: 0;
         }
         .catalog-cart-btn { background: none; border: none; padding: 0; position: relative; }
-        .catalog-cart-img { width: 32px; height: 32px; }
+        .catalog-cart-img { width: 38px; height: 38px; }
         .catalog-cart-count {
           position: absolute; top: -5px; right: -5px;
-          background: #30bc6c; color: #fff; font-size: 12px; border-radius: 100%;
-          padding: 0 6px; min-width: 16px; text-align: center;
+          background: #30bc6c; color: #fff; font-size: 14px; border-radius: 100%;
+          padding: 0 7px; min-width: 19px; text-align: center;
         }
         .catalog-categories {
-          display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;
-          padding: 14px 0 2px 0; background: none;
+          display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;
+          padding: 15px 0 5px 0; background: none;
         }
         .catalog-cat-btn {
-          font-size: 15px; border-radius: 22px; border: 2px solid #30bc6c;
-          background: none; padding: 4px 18px; transition: all 0.16s; color: #30bc6c;
+          font-size: 17px; border-radius: 22px; border: 2px solid #30bc6c;
+          background: none; padding: 6px 22px; transition: all 0.16s; color: #30bc6c;
           font-weight: 600; cursor: pointer;
         }
         .catalog-cat-btn.active {
           background: #30bc6c; color: #fff; border-color: #23a45a;
         }
         .catalog-products {
-          margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          max-width: 1100px; gap: 20px; padding: 0 8px;
+          margin: 0 auto; 
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          max-width: 1100px; gap: 26px; padding: 0 12px;
         }
         .catalog-card {
-          background: #fff; border-radius: 18px; box-shadow: 0 2px 8px 0 rgba(60,90,70,0.04);
-          padding: 20px 16px 16px 16px; display: flex; flex-direction: column;
-          align-items: center; transition: box-shadow 0.2s; margin-top: 0; min-height: 375px; position: relative;
+          background: #fff; border-radius: 18px; box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
+          padding: 20px 16px 18px 16px; display: flex; flex-direction: column;
+          align-items: center; transition: box-shadow 0.2s; margin-top: 0; min-height: 370px; position: relative;
         }
-        .catalog-card img { max-width: 90px; max-height: 90px; margin-bottom: 10px; object-fit: contain; background: transparent; }
-        .catalog-card-title { font-weight: 700; font-size: 18px; text-align: center; margin-bottom: 2px; }
-        .catalog-card-desc { font-size: 15px; text-align: center; margin-bottom: 7px; color: #5d675d; min-height: 34px; }
-        .catalog-card-price { font-size: 16px; font-weight: 700; color: #30bc6c; margin-bottom: 1px; }
-        .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 7px; }
-        .catalog-card-btns { display: flex; gap: 8px; width: 100%; justify-content: center; }
-        .catalog-card-btn { border: none; border-radius: 20px; padding: 5px 14px; font-size: 15px; font-weight: 500; cursor: pointer; background: #e8f9ef; color: #23a45a; transition: background 0.13s; }
+        .catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
+        .catalog-card-title { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 3px; }
+        .catalog-card-desc { font-size: 15px; text-align: center; margin-bottom: 8px; color: #5d675d; min-height: 34px; }
+        .catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
+        .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
+        .catalog-card-btns { display: flex; gap: 10px; width: 100%; justify-content: center; }
+        .catalog-card-btn { border: none; border-radius: 20px; padding: 7px 17px; font-size: 15px; font-weight: 500; cursor: pointer; background: #e8f9ef; color: #23a45a; transition: background 0.13s; }
         .catalog-card-btn.green { background: #30bc6c; color: #fff; }
-        .catalog-card-details { font-size: 14px; background: #f4fbf6; margin-top: 8px; padding: 8px 10px; border-radius: 11px; width: 100%; }
+        .catalog-card-details { font-size: 14px; background: #f4fbf6; margin-top: 10px; padding: 10px 13px; border-radius: 12px; width: 100%; }
+        /* --- Адаптив --- */
+        @media (max-width: 950px) {
+          .catalog-products { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 600px) {
-          .catalog-header-row { flex-direction: column; gap: 8px; }
-          .catalog-logo { max-width: 100px; max-height: 36px; }
-          .catalog-products { gap: 13px; }
-          .catalog-card { padding: 11px 7px 11px 7px; min-height: 340px; }
-          .catalog-card img { max-width: 62px; max-height: 62px; }
+          .catalog-header-row { flex-direction: column; gap: 10px; }
+          .catalog-logo { max-width: 160px; max-height: 60px; }
+          .catalog-products { gap: 11px; grid-template-columns: repeat(2, 1fr); }
+          .catalog-card { padding: 12px 7px 13px 7px; min-height: 330px; }
+          .catalog-card img { max-width: 64px; max-height: 64px; }
         }
         `}
       </style>
@@ -257,11 +266,10 @@ export default function Catalog() {
                 className={`catalog-flag-btn${lang === l.code ? " active" : ""}`}
                 title={l.label}
               >
-                <img src={l.img} alt={l.code} style={{ width: 23, height: 23, borderRadius: "50%" }} />
+                <img src={l.img} alt={l.code} style={{ width: 25, height: 25, borderRadius: "50%" }} />
               </button>
             ))}
           </div>
-
           {/* Логотип */}
           <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
             <img
@@ -272,10 +280,8 @@ export default function Catalog() {
               style={{ background: "transparent" }}
             />
           </div>
-
           {/* Поиск и корзина */}
           <div className="catalog-header-actions">
-            {/* Поиск (desktop) */}
             <div className="catalog-search" style={{ display: "flex", alignItems: "center" }}>
               <span className="mr-2" style={{ fontSize: 18, color: "#aaa" }}>🔍</span>
               <input
@@ -289,7 +295,6 @@ export default function Catalog() {
                 onChange={e => setSearch(e.target.value)}
               />
             </div>
-            {/* Корзина */}
             <button className="catalog-cart-btn" onClick={() => setCartOpen(o => !o)}>
               <img src={basketImg} alt="Корзина" className="catalog-cart-img" />
               {cart.length > 0 && (
