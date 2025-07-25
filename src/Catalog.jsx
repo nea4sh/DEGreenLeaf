@@ -777,25 +777,21 @@ body, .bg-green-50 { background: #e9faee !important; }
   max-width: 1100px;
   gap: 26px;
   padding: 0 12px;
-  align-items: stretch;
 }
 .catalog-card {
   background: #fff; border-radius: 18px; box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
   padding: 20px 16px 18px 16px; display: flex; flex-direction: column;
-  align-items: center; transition: box-shadow 0.2s; margin-top: 0;
-  min-height: 370px; position: relative; height: 100%;
-  box-sizing: border-box;
+  align-items: center; transition: box-shadow 0.2s; margin-top: 0; min-height: 370px; position: relative;
 }
 .catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
-.catalog-card-title { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 3px; word-break: break-word; }
-.catalog-card-desc { font-size: 15px; text-align: center; margin-bottom: 8px; color: #5d675d; min-height: 34px; word-break: break-word; }
+.catalog-card-title { font-weight: 700; font-size: 20px; text-align: center; margin-bottom: 3px; }
+.catalog-card-desc { font-size: 15px; text-align: center; margin-bottom: 8px; color: #5d675d; min-height: 34px; }
 .catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
 .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
 .catalog-card-btns { display: flex; gap: 10px; width: 100%; justify-content: center; }
 .catalog-card-btn { border: none; border-radius: 20px; padding: 7px 17px; font-size: 15px; font-weight: 500; cursor: pointer; background: #e8f9ef; color: #23a45a; transition: background 0.13s; }
 .catalog-card-btn.green { background: #30bc6c; color: #fff; }
 .catalog-card-details { font-size: 14px; background: #f4fbf6; margin-top: 10px; padding: 10px 13px; border-radius: 12px; width: 100%; }
-
 /* --- Адаптив --- */
 @media (max-width: 950px) {
   .catalog-products { grid-template-columns: repeat(2, 1fr); }
@@ -806,8 +802,9 @@ body, .bg-green-50 { background: #e9faee !important; }
   .catalog-products { gap: 11px; grid-template-columns: repeat(2, 1fr); }
   .catalog-card { padding: 12px 7px 13px 7px; min-height: 330px; }
   .catalog-card img { max-width: 64px; max-height: 64px; }
-
+}
 `}</style>
+
 
 
 
