@@ -55,14 +55,20 @@ body, .bg-green-50 { background: #e9faee !important; }
   color: #30bc6c;
   font-weight: 600;
   cursor: pointer;
-  /* --- Добавь это --- */
-  max-width: 90vw;       /* не шире 90% экрана, чтобы кнопки не вылезали */
-  min-width: 120px;      /* чтобы совсем короткие не были узкими */
-  white-space: normal;   /* разрешает перенос слов */
+  max-width: 90vw;
+  min-width: 120px;
+  white-space: normal;
   text-align: center;
-  word-break: break-word; /* переносить длинные слова */
-  flex: 1 1 170px;       /* растягивать, но базово 170px */
+  word-break: break-word;
+  flex: 1 1 170px;
   box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .catalog-cat-btn {
+    padding: 6px 10px;
+    font-size: 15px;
+    min-width: 105px;
+    max-width: 170px;
 }
 .catalog-header-row {
   display: flex; align-items: center; justify-content: space-between;
