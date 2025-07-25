@@ -724,8 +724,8 @@ export default function Catalog() {
     .catalog-products {
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 850px;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1100px;
       gap: 26px;
       padding: 0 12px;
       align-items: stretch;
@@ -749,7 +749,7 @@ export default function Catalog() {
       font-size: 20px;
       text-align: center;
       margin-bottom: 3px;
-      min-height: 48px; /* Чтобы заголовки не скакали */
+      min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -759,18 +759,22 @@ export default function Catalog() {
       text-align: center;
       margin-bottom: 8px;
       color: #5d675d;
-      min-height: 38px; /* Фиксированная высота для коротких/длинных описаний */
+      min-height: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    /* --- Мобильная версия --- */
-    @media (max-width: 700px) {
-      .catalog-products { grid-template-columns: 1fr; }
-      .catalog-card { min-height: 310px; }
+    /* --- Адаптив --- */
+    @media (max-width: 600px) {
+      .catalog-header-row { flex-direction: column; gap: 10px; }
+      .catalog-logo { max-width: 160px; max-height: 60px; }
+      .catalog-products { gap: 11px; grid-template-columns: repeat(2, 1fr); }
+      .catalog-card { padding: 12px 7px 13px 7px; min-height: 330px; }
+      .catalog-card img { max-width: 64px; max-height: 64px; }
     }
   `}
 </style>
+
 
 
 
