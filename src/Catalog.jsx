@@ -21,9 +21,23 @@ const products = [
     usageEn: "Apply to clean, dry underarm skin..."
   },
   // ... все твои товары!
+const categories = [
+  { code: "deodorant", ru: "Дезодоранты", de: "Deodorants", en: "Deodorants" },
 ];
 
-// Курсы валют (можно обновить)
+// --- Флаги
+const FLAGS = {
+  ru: "https://imgur.com/j2R2ynb.png",
+  de: "https://imgur.com/z59SrMa.png",
+  en: "https://imgur.com/QOgt3c2.png",
+};
+
+// --- Логотип
+const LOGO = "https://imgur.com/C2Z7Njw.png";
+// --- Картинка корзины
+const basketImg = "https://imgur.com/gbChm8g.png";
+
+// --- Курсы валют
 const RUBLE_TO_DOLLAR = 90;
 const RUBLE_TO_EURO = 98;
 
@@ -44,12 +58,10 @@ function formatPrice(price, lang = "ru") {
 }
 
 const LANGS = [
-  { code: "ru", label: "🇷🇺" },
-  { code: "de", label: "🇩🇪" },
-  { code: "en", label: "🇬🇧" },
+  { code: "ru", label: <img src={FLAGS.ru} alt="RU" className="w-6 h-6" /> },
+  { code: "de", label: <img src={FLAGS.de} alt="DE" className="w-6 h-6" /> },
+  { code: "en", label: <img src={FLAGS.en} alt="EN" className="w-6 h-6" /> },
 ];
-
-const basketImg = "https://imgur.com/gbChm8g.png";
 
 export default function Catalog() {
   const [lang, setLang] = useState("ru");
@@ -61,19 +73,32 @@ export default function Catalog() {
   const [activeCategory, setActiveCategory] = useState(null);
 
   // Категории (если нет, то "Без категории")
-  const categories = useMemo(
-    () => Array.from(new Set(products.map(p => p.category || "Без категории"))),
+  const categoryList = useMemo(
+    () => [
+      ...categories,
+      ...products
+        .filter(p => !p.category)
+        .map(() => ({
+          code: "uncat",
+          ru: "Без категории",
+          de: "Ohne Kategorie",
+          en: "No category"
+        })),
+    ],
     []
   );
 
   // Фильтрация по поиску и категории
   const filteredProducts = useMemo(() => {
     let arr = products;
-    if (activeCategory) arr = arr.filter(p => (p.category || "Без категории") === activeCategory);
+    if (activeCategory) arr = arr.filter(p => (p.category || "uncat") === activeCategory);
     if (search) {
       const s = search.toLowerCase();
       arr = arr.filter(p =>
         (p[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || "")
+          .toLowerCase()
+          .includes(s) ||
+        (p[`full${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || "")
           .toLowerCase()
           .includes(s)
       );
@@ -81,15 +106,13 @@ export default function Catalog() {
     return arr;
   }, [products, search, lang, activeCategory]);
 
-  // Количество товара в корзине
+  // Корзина
   function getProductCount(id) {
     return cart.filter(item => item.id === id).length;
   }
-  // Добавить товар
   function handleAdd(product) {
     setCart([...cart, product]);
   }
-  // Убавить товар
   function handleRemove(product) {
     const idx = cart.findIndex(item => item.id === product.id);
     if (idx !== -1) {
@@ -98,24 +121,18 @@ export default function Catalog() {
       setCart(newCart);
     }
   }
-  // Убрать все
   function handleRemoveAll(id) {
     setCart(cart.filter(item => item.id !== id));
   }
-  // Очистить фильтр категории
   function clearCategory() {
     setActiveCategory(null);
   }
-  // Навигация по категории
   function handleCategoryClick(cat) {
     setActiveCategory(cat);
   }
-  // Открыть/закрыть поиск на мобилке
   function toggleSearchMobile() {
     setShowSearchMobile(s => !s);
   }
-
-  // Telegram
   function sendTelegramMessage() {
     const counts = {};
     cart.forEach(item => {
@@ -133,42 +150,37 @@ export default function Catalog() {
     window.open(`https://t.me/nea4sh_03?text=${text}`, "_blank");
   }
 
+  // --- UI ---
   return (
-    <div className="bg-green-50 min-h-screen pb-12 relative">
-      {/* === Шапка с языками, логотипом и поиском === */}
-      <header className="bg-white shadow fixed w-full z-30 top-0 left-0">
-        <div className="flex items-center justify-between px-3 py-3 max-w-5xl mx-auto relative">
+    <div className="bg-[#eefdf4] min-h-screen pb-12 relative font-sans">
+      {/* === Шапка === */}
+      <header className="bg-[#eefdf4] shadow sticky top-0 z-30 w-full py-3 px-2">
+        <div className="flex items-center justify-between max-w-5xl mx-auto">
           {/* Языки */}
           <div className="flex gap-2 items-center">
             {LANGS.map(l => (
               <button
                 key={l.code}
                 onClick={() => setLang(l.code)}
-                className={`text-2xl px-1 rounded-full transition ${lang === l.code ? 'ring-2 ring-green-400' : ''}`}
+                className={`rounded-full transition p-0.5 ${lang === l.code ? 'ring-2 ring-green-400' : ''}`}
                 title={l.code}
               >
                 {l.label}
               </button>
             ))}
           </div>
-
           {/* Логотип */}
-          <div className="flex-1 flex justify-center">
-            <img
-              src="https://i.imgur.com/KR2zF5W.png"
-              alt="Логотип"
-              className="h-28 w-auto"
-              draggable={false}
-              style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.07))" }}
-            />
-          </div>
-
-          {/* Корзина + Поиск */}
-          <div className="flex items-center gap-3">
-            {/* Поиск десктоп */}
-            <div className="hidden md:block mr-3">
-              <div className="flex items-center border rounded-full px-3 py-1 bg-gray-50">
-                <span className="mr-2 text-lg text-gray-400">🔍</span>
+          <img
+            src={LOGO}
+            alt="Greenleaf"
+            className="h-12 md:h-16 object-contain select-none mx-2"
+            style={{ background: "none" }}
+            draggable={false}
+          />
+          {/* Поиск + корзина */}
+          <div className="flex gap-2 items-center">
+            <div className="hidden md:block">
+              <div className="flex items-center border rounded-full px-3 py-1 bg-white">
                 <input
                   type="text"
                   placeholder={{
@@ -176,13 +188,13 @@ export default function Catalog() {
                     de: "Suche...",
                     en: "Search..."
                   }[lang]}
-                  className="bg-transparent outline-none w-40"
+                  className="bg-transparent outline-none w-36"
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                 />
+                <span className="ml-2 text-xl text-gray-400">🔍</span>
               </div>
             </div>
-            {/* Поиск мобилка */}
             <button
               className="md:hidden text-2xl p-2 bg-gray-100 rounded-full"
               onClick={toggleSearchMobile}
@@ -190,7 +202,7 @@ export default function Catalog() {
             >🔍</button>
             {/* Корзина */}
             <button
-              className="relative"
+              className="relative bg-white rounded-full p-1"
               onClick={() => setCartOpen(o => !o)}
               title={{
                 ru: "Корзина",
@@ -198,16 +210,16 @@ export default function Catalog() {
                 en: "Cart"
               }[lang]}
             >
-              <img src={basketImg} alt="Корзина" className="w-11 h-11" />
+              <img src={basketImg} alt="Корзина" className="w-8 h-8" />
               {cart.length > 0 &&
-                <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-green-500 text-white text-xs rounded-full px-2">
+                <span className="absolute -top-1 -right-1 bg-green-600 text-white text-xs rounded-full px-2">
                   {cart.length}
                 </span>
               }
             </button>
           </div>
         </div>
-        {/* Поиск мобилка - выпадение */}
+        {/* Поиск мобилка */}
         {showSearchMobile && (
           <div className="md:hidden p-2 bg-white border-b shadow-sm">
             <div className="flex items-center border rounded-full px-3 py-2 bg-gray-50">
@@ -228,6 +240,127 @@ export default function Catalog() {
           </div>
         )}
       </header>
+
+      {/* === Категории === */}
+      <nav className="max-w-5xl mx-auto my-3 flex flex-wrap gap-2 justify-center">
+        <button
+          onClick={clearCategory}
+          className={`px-4 py-2 rounded-full border font-medium ${!activeCategory ? 'bg-green-600 text-white border-green-600' : 'bg-white border-green-400 text-green-800'}`}
+        >
+          {{
+            ru: "Все товары",
+            de: "Alle Produkte",
+            en: "All products"
+          }[lang]}
+        </button>
+        {categories.map(cat => (
+          <button
+            key={cat.code}
+            onClick={() => handleCategoryClick(cat.code)}
+            className={`px-4 py-2 rounded-full border font-medium ${activeCategory === cat.code ? 'bg-green-600 text-white border-green-600' : 'bg-white border-green-400 text-green-800'}`}
+          >
+            {cat[lang]}
+          </button>
+        ))}
+      </nav>
+
+      {/* === Товары === */}
+      <main className="max-w-5xl mx-auto px-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {filteredProducts.length === 0 && (
+            <div className="col-span-full text-center text-gray-500 py-20 text-lg">
+              {{
+                ru: "Товары не найдены",
+                de: "Keine Produkte gefunden",
+                en: "No products found"
+              }[lang]}
+            </div>
+          )}
+          {filteredProducts.map(product => {
+            const count = getProductCount(product.id);
+            return (
+              <div key={product.id} className="bg-white rounded-2xl shadow-md p-4 flex flex-col relative min-h-[330px]">
+                <img src={product.image} alt={product[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`]} className="w-full h-40 object-contain mb-2" />
+                <div className="font-semibold text-center text-lg">
+                  {product[`name${lang.charAt(0).toUpperCase()+lang.slice(1)}`]}
+                </div>
+                <div className="text-sm text-gray-500 text-center mb-1">
+                  {product[`short${lang.charAt(0).toUpperCase()+lang.slice(1)}`]}
+                </div>
+                <div className="text-green-700 font-semibold text-md text-center mb-1">
+                  {formatPrice(product.price, lang)}
+                </div>
+                <div className="text-xs text-gray-400 text-center mb-1">
+                  {product.article && `Артикул: ${product.article}`}
+                </div>
+                <div className="flex justify-center gap-2 mb-2">
+                  <button
+                    onClick={() => setExpanded(expanded === product.id ? null : product.id)}
+                    className="text-sm px-4 py-1 bg-gray-100 rounded-full hover:bg-gray-200"
+                  >
+                    {{
+                      ru: "Подробнее",
+                      de: "Mehr Info",
+                      en: "More info"
+                    }[lang]}
+                  </button>
+                  {count === 0 ? (
+                    <button
+                      onClick={() => handleAdd(product)}
+                      className="text-sm px-4 py-1 bg-green-500 text-white rounded-full hover:bg-green-600"
+                    >
+                      {{
+                        ru: "В корзину",
+                        de: "In den Warenkorb",
+                        en: "Add to cart"
+                      }[lang]}
+                    </button>
+                  ) : (
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => handleRemove(product)}
+                        className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                      >–</button>
+                      <span className="mx-1 min-w-[20px] text-center font-semibold">{count}</span>
+                      <button
+                        onClick={() => handleAdd(product)}
+                        className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                      >+</button>
+                    </div>
+                  )}
+                </div>
+                {/* Модалка описания */}
+                {expanded === product.id && (
+                  <div className="mt-2 p-2 bg-gray-50 rounded text-sm max-h-48 overflow-y-auto">
+                    <div>
+                      <b>{
+                        {
+                          ru: "Описание",
+                          de: "Beschreibung",
+                          en: "Description"
+                        }[lang]
+                      }:</b>
+                      <p className="mb-2">
+                        {product[`full${lang.charAt(0).toUpperCase()+lang.slice(1)}`]}
+                      </p>
+                      <b>{
+                        {
+                          ru: "Применение",
+                          de: "Anwendung",
+                          en: "Usage"
+                        }[lang]
+                      }:</b>
+                      <p>
+                         {product[`usage${lang.charAt(0).toUpperCase()+lang.slice(1)}`]}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </main>
 
       {/* === Боковая корзина === */}
       {cartOpen && (
@@ -309,126 +442,6 @@ export default function Catalog() {
           </div>
         </div>
       )}
-
-      {/* === Навигация по категориям === */}
-      <nav className="pt-36 max-w-5xl mx-auto mb-3 flex flex-wrap gap-2 justify-center sticky top-32 z-20 bg-green-50">
-        <button
-          onClick={clearCategory}
-          className={`px-4 py-2 rounded-full border ${activeCategory ? 'bg-white border-green-400 text-green-800' : 'bg-green-600 text-white border-green-600'} font-medium`}
-        >
-          {{
-            ru: "Все товары",
-            de: "Alle Produkte",
-            en: "All products"
-          }[lang]}
-        </button>
-        {categories.map(cat => (
-          <button
-            key={cat}
-            onClick={() => handleCategoryClick(cat)}
-            className={`px-4 py-2 rounded-full border ${activeCategory === cat ? 'bg-green-600 text-white border-green-600' : 'bg-white border-green-400 text-green-800'} font-medium`}
-          >
-            {cat}
-          </button>
-        ))}
-      </nav>
-
-      {/* === Товары === */}
-      <main className="max-w-5xl mx-auto px-3">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {filteredProducts.length === 0 && (
-            <div className="col-span-full text-center text-gray-500 py-20 text-lg">
-              {{
-                ru: "Товары не найдены",
-                de: "Keine Produkte gefunden",
-                en: "No products found"
-              }[lang]}
-            </div>
-          )}
-          {filteredProducts.map(product => {
-            const count = getProductCount(product.id);
-            return (
-              <div key={product.id} className="bg-white rounded-2xl shadow-md p-4 flex flex-col relative">
-                <img src={product.image} alt={product[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`]} className="w-full h-44 object-contain mb-2" />
-                <div className="font-semibold text-center text-lg">
-                  {product[`name${lang.charAt(0).toUpperCase()+lang.slice(1)}`] || product.nameRu}
-                </div>
-                <div className="text-sm text-gray-500 text-center mb-1">
-                  {product[`short${lang.charAt(0).toUpperCase()+lang.slice(1)}`] || product.shortRu}
-                </div>
-                <div className="text-green-700 font-semibold text-md text-center mb-1">
-                  {formatPrice(product.price, lang)}
-                </div>
-                <div className="text-xs text-gray-400 text-center mb-1">
-                  {product.article && `Артикул: ${product.article}`}
-                </div>
-                <div className="flex justify-center gap-2 mb-2">
-                  <button
-                    onClick={() => setExpanded(expanded === product.id ? null : product.id)}
-                    className="text-sm px-4 py-1 bg-gray-100 rounded-full hover:bg-gray-200"
-                  >
-                    {{
-                      ru: "Подробнее",
-                      de: "Mehr Info",
-                      en: "More info"
-                    }[lang]}
-                  </button>
-                  {count === 0 ? (
-                    <button
-                      onClick={() => handleAdd(product)}
-                      className="text-sm px-4 py-1 bg-green-500 text-white rounded-full hover:bg-green-600"
-                    >
-                      {{
-                        ru: "В корзину",
-                        de: "In den Warenkorb",
-                        en: "Add to cart"
-                      }[lang]}
-                    </button>
-                  ) : (
-                    <div className="flex items-center gap-1">
-                      <button
-                        onClick={() => handleRemove(product)}
-                        className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
-                      >–</button>
-                      <span className="mx-1 min-w-[20px] text-center font-semibold">{count}</span>
-                      <button
-                        onClick={() => handleAdd(product)}
-                        className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
-                      >+</button>
-                    </div>
-                  )}
-                </div>
-                {expanded === product.id && (
-                  <div className="mt-2 p-2 bg-gray-50 rounded text-sm max-h-48 overflow-y-auto">
-                    <div>
-                      <b>{
-                        {
-                          ru: "Описание",
-                          de: "Beschreibung",
-                          en: "Description"
-                        }[lang]
-                      }:</b>
-                      <p className="mb-2">
-                        {product[`full${lang.charAt(0).toUpperCase()+lang.slice(1)}`] || product.fullRu}
-                      </p>
-                      <b>{
-                        {
-                          ru: "Применение",
-                          de: "Anwendung",
-                          en: "Usage"
-                        }[lang]
-                      }:</b>
-                      <p>
-                         {product[`usage${lang.charAt(0).toUpperCase()+lang.slice(1)}`] || product.usageRu}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </main>
     </div>
   );
 }
