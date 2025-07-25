@@ -488,6 +488,7 @@ export default function Catalog() {
   const [expanded, setExpanded] = useState(null);
   const [cart, setCart] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const handleToggle = (id) => {
     setExpanded(expanded === id ? null : id);
@@ -496,7 +497,11 @@ export default function Catalog() {
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
     setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2000);
+    setTimeout(() => setShowNotification(false), 1500);
+  };
+
+  const handleRemoveFromCart = (index) => {
+    setCart(cart.filter((_, i) => i !== index));
   };
 
   const sendTelegramMessage = () => {
@@ -507,30 +512,78 @@ export default function Catalog() {
     window.open(url, "_blank");
   };
 
-  // Получаем список категорий (в том числе "Без категории")
-  const categories = Array.from(new Set(products.map(p => p.category || "Без категории")));
+  // Получаем категории
+  const categories = Array.from(
+    new Set(products.map((p) => p.category || "Без категории"))
+  );
 
   return (
     <div className="bg-green-100 min-h-screen relative">
-      {/* --- Шапка, корзина и кнопка Telegram (оставь, где хочешь, например тут) --- */}
-      <div className="text-center py-4">
+      {/* Шапка */}
+      <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-md flex items-center justify-between px-8 h-28">
+        <div className="flex items-center gap-6">
+          <img
+            src="https://i.imgur.com/POgUMNJ.png"
+            alt="Логотип"
+            className="h-24"
+            style={{ width: "auto", maxHeight: "6rem" }}
+          />
+          <span className="text-2xl font-bold text-green-700">Твой магазин</span>
+        </div>
         <button
-          onClick={sendTelegramMessage}
-          className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full"
+          className="relative bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition"
+          onClick={() => setCartOpen(!cartOpen)}
         >
-          Отправить заказ в Telegram / Bestellung per Telegram senden
+          Корзина ({cart.length})
         </button>
-      </div>
+      </header>
 
-      {/* --- Основной контент с разбивкой по категориям --- */}
-      <main className="p-4 mt-8">
-        {categories.map(category => (
+      {/* Корзина (плавающая) */}
+      {cartOpen && (
+        <div className="fixed top-32 right-8 w-80 bg-white shadow-xl rounded-2xl p-5 z-50 max-h-[70vh] overflow-y-auto">
+          <h2 className="text-xl font-bold mb-3 text-green-700">Корзина</h2>
+          {cart.length === 0 ? (
+            <div className="text-gray-500">Корзина пуста</div>
+          ) : (
+            <ul className="space-y-2">
+              {cart.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex justify-between items-center border-b pb-1"
+                >
+                  <span>{item.nameRu}</span>
+                  <span className="text-green-600">{item.price}</span>
+                  <button
+                    className="ml-2 text-red-500 hover:underline"
+                    onClick={() => handleRemoveFromCart(i)}
+                  >
+                    Удалить
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <button
+            className="mt-5 w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full font-semibold"
+            onClick={sendTelegramMessage}
+            disabled={cart.length === 0}
+          >
+            Отправить заказ в Telegram
+          </button>
+        </div>
+      )}
+
+      {/* Контент */}
+      <main className="p-4 pt-36">
+        {categories.map((category) => (
           <div key={category} className="mb-10">
             <h2 className="text-2xl font-bold mb-4 text-green-800">{category}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {products
-                .filter(product => (product.category || "Без категории") === category)
-                .map(product => (
+                .filter(
+                  (product) => (product.category || "Без категории") === category
+                )
+                .map((product) => (
                   <div
                     key={product.id}
                     className="flex flex-col justify-between rounded-2xl shadow-md overflow-hidden bg-white transition-all duration-300 ease-in-out min-h-[620px]"
@@ -541,11 +594,19 @@ export default function Catalog() {
                         alt={product.nameRu}
                         className="w-full h-48 object-contain mb-2"
                       />
-                      <h2 className="text-lg font-semibold text-center">{product.nameRu}</h2>
-                      <p className="text-sm text-gray-500 text-center">{product.nameDe}</p>
+                      <h2 className="text-lg font-semibold text-center">
+                        {product.nameRu}
+                      </h2>
+                      <p className="text-sm text-gray-500 text-center">
+                        {product.nameDe}
+                      </p>
                       <p className="text-md mt-2 text-center">{product.shortRu}</p>
-                      <p className="text-sm text-gray-500 text-center">{product.shortDe}</p>
-                      <div className="mt-2 text-center font-semibold text-green-600">{product.price}</div>
+                      <p className="text-sm text-gray-500 text-center">
+                        {product.shortDe}
+                      </p>
+                      <div className="mt-2 text-center font-semibold text-green-600">
+                        {product.price}
+                      </div>
                       <div className="text-xs text-center text-gray-500">
                         Артикул: {product.article || "—"}
                       </div>
@@ -568,25 +629,28 @@ export default function Catalog() {
                           <div className="mb-2">
                             <strong>Описание:</strong>
                             <p>{product.fullRu}</p>
-                            <p className="mt-1 text-gray-500">{product.fullDe}</p>
+                            <p className="mt-1 text-gray-500">
+                              {product.fullDe}
+                            </p>
                           </div>
                           <div>
                             <strong>Применение:</strong>
                             <p>{product.usageRu}</p>
-                            <p className="mt-1 text-gray-500">{product.usageDe}</p>
+                            <p className="mt-1 text-gray-500">
+                              {product.usageDe}
+                            </p>
                           </div>
                         </div>
                       )}
                     </div>
                   </div>
-                ))
-              }
+                ))}
             </div>
           </div>
         ))}
       </main>
 
-      {/* --- Уведомление о добавлении --- */}
+      {/* Уведомление */}
       {showNotification && (
         <div className="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
           Товар добавлен в корзину
