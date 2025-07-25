@@ -488,7 +488,13 @@ export default function Catalog() {
   const [expanded, setExpanded] = useState(null);
   const [cart, setCart] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+
+  // Получаем все категории, даже если поля нет
+  const categories = Array.from(new Set(products.map(p => p.category || "Без категории")));
+
+  // Количество определенного товара в корзине
+  const getProductCount = (id) =>
+    cart.filter(item => item.id === id).length;
 
   const handleToggle = (id) => {
     setExpanded(expanded === id ? null : id);
@@ -497,160 +503,188 @@ export default function Catalog() {
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
     setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 1500);
+    setTimeout(() => setShowNotification(false), 1200);
   };
 
-  const handleRemoveFromCart = (index) => {
-    setCart(cart.filter((_, i) => i !== index));
+  const handleIncrement = (product) => {
+    setCart([...cart, product]);
+  };
+
+  const handleDecrement = (product) => {
+    const idx = cart.findIndex(item => item.id === product.id);
+    if (idx !== -1) {
+      const newCart = [...cart];
+      newCart.splice(idx, 1);
+      setCart(newCart);
+    }
+  };
+
+  const handleRemoveFromCart = (idx) => {
+    setCart(cart.filter((_, i) => i !== idx));
   };
 
   const sendTelegramMessage = () => {
-    const message = cart
-      .map((item) => `• ${item.nameRu} – ${item.price}`)
+    const counts = {};
+    cart.forEach(item => {
+      counts[item.id] = (counts[item.id] || 0) + 1;
+    });
+    const message = Object.entries(counts)
+      .map(([id, count]) => {
+        const product = products.find(p => p.id === +id);
+        return `• ${product?.nameRu || "Товар"} – ${product?.price || ""} × ${count}`;
+      })
       .join("%0A");
     const url = `https://t.me/nea4sh_03?text=🛒 Заказ / Bestellung:%0A${message}`;
     window.open(url, "_blank");
   };
 
-  // Получаем категории
-  const categories = Array.from(
-    new Set(products.map((p) => p.category || "Без категории"))
-  );
-
   return (
     <div className="bg-green-100 min-h-screen relative">
-      {/* Шапка */}
-      <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-md flex items-center justify-between px-8 h-28">
-        <div className="flex items-center gap-6">
+      {/* --- Шапка с большим логотипом по центру --- */}
+      <div className="bg-white shadow-md fixed top-0 left-0 right-0 z-30">
+        <div className="max-w-5xl mx-auto flex justify-center items-center py-4">
           <img
-            src="https://i.imgur.com/POgUMNJ.png"
+            src="https://i.imgur.com/KR2zF5W.png"
             alt="Логотип"
-            className="h-24"
-            style={{ width: "auto", maxHeight: "6rem" }}
+            className="h-28 w-auto mx-auto"
           />
-          <span className="text-2xl font-bold text-green-700">Твой магазин</span>
         </div>
-        <button
-          className="relative bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition"
-          onClick={() => setCartOpen(!cartOpen)}
-        >
-          Корзина ({cart.length})
-        </button>
-      </header>
+      </div>
 
-      {/* Корзина (плавающая) */}
-      {cartOpen && (
-        <div className="fixed top-32 right-8 w-80 bg-white shadow-xl rounded-2xl p-5 z-50 max-h-[70vh] overflow-y-auto">
-          <h2 className="text-xl font-bold mb-3 text-green-700">Корзина</h2>
+      {/* --- Корзина справа сверху --- */}
+      <div className="fixed top-6 right-6 z-40 w-[340px] max-w-[92vw]">
+        <div className="bg-white rounded-2xl shadow-lg p-4">
+          <h3 className="text-xl font-semibold mb-2">Корзина</h3>
           {cart.length === 0 ? (
-            <div className="text-gray-500">Корзина пуста</div>
+            <div className="text-gray-500 text-sm">Корзина пуста</div>
           ) : (
-            <ul className="space-y-2">
-              {cart.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex justify-between items-center border-b pb-1"
-                >
-                  <span>{item.nameRu}</span>
-                  <span className="text-green-600">{item.price}</span>
-                  <button
-                    className="ml-2 text-red-500 hover:underline"
-                    onClick={() => handleRemoveFromCart(i)}
-                  >
-                    Удалить
-                  </button>
-                </li>
+            <div className="space-y-2 max-h-52 overflow-y-auto">
+              {Object.entries(
+                cart.reduce((acc, item) => {
+                  acc[item.id] = acc[item.id] || { ...item, count: 0 };
+                  acc[item.id].count += 1;
+                  return acc;
+                }, {})
+              ).map(([id, item], idx) => (
+                <div key={id} className="flex justify-between items-center border-b pb-1">
+                  <div>
+                    <span className="font-medium">{item.nameRu}</span>
+                    <span className="block text-xs text-gray-400">{item.price}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() => handleDecrement(item)}
+                      className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                    >–</button>
+                    <span className="mx-1 min-w-[18px] text-center">{item.count}</span>
+                    <button
+                      onClick={() => handleIncrement(item)}
+                      className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                    >+</button>
+                    <button
+                      onClick={() => {
+                        // Удалить все такие товары сразу
+                        setCart(cart.filter(c => c.id !== item.id));
+                      }}
+                      className="ml-2 text-red-500 hover:text-red-700 text-lg"
+                      title="Убрать из корзины"
+                    >×</button>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           )}
           <button
-            className="mt-5 w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full font-semibold"
-            onClick={sendTelegramMessage}
             disabled={cart.length === 0}
+            onClick={sendTelegramMessage}
+            className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             Отправить заказ в Telegram
           </button>
         </div>
-      )}
+      </div>
 
-      {/* Контент */}
-      <main className="p-4 pt-36">
-        {categories.map((category) => (
+      {/* --- Основная часть с категориями --- */}
+      <main className="p-4 mt-40 max-w-6xl mx-auto">
+        {categories.map(category => (
           <div key={category} className="mb-10">
             <h2 className="text-2xl font-bold mb-4 text-green-800">{category}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {products
-                .filter(
-                  (product) => (product.category || "Без категории") === category
-                )
-                .map((product) => (
-                  <div
-                    key={product.id}
-                    className="flex flex-col justify-between rounded-2xl shadow-md overflow-hidden bg-white transition-all duration-300 ease-in-out min-h-[620px]"
-                  >
-                    <div className="p-4 space-y-2">
-                      <img
-                        src={product.image}
-                        alt={product.nameRu}
-                        className="w-full h-48 object-contain mb-2"
-                      />
-                      <h2 className="text-lg font-semibold text-center">
-                        {product.nameRu}
-                      </h2>
-                      <p className="text-sm text-gray-500 text-center">
-                        {product.nameDe}
-                      </p>
-                      <p className="text-md mt-2 text-center">{product.shortRu}</p>
-                      <p className="text-sm text-gray-500 text-center">
-                        {product.shortDe}
-                      </p>
-                      <div className="mt-2 text-center font-semibold text-green-600">
-                        {product.price}
-                      </div>
-                      <div className="text-xs text-center text-gray-500">
-                        Артикул: {product.article || "—"}
-                      </div>
-                      <div className="flex justify-center gap-2 mt-2">
-                        <button
-                          onClick={() => handleToggle(product.id)}
-                          className="text-sm px-4 py-1 bg-gray-100 rounded-full hover:bg-gray-200"
-                        >
-                          Подробнее / Mehr
-                        </button>
-                        <button
-                          onClick={() => handleAddToCart(product)}
-                          className="text-sm px-4 py-1 bg-green-500 text-white rounded-full hover:bg-green-600"
-                        >
-                          В корзину / In den Warenkorb
-                        </button>
-                      </div>
-                      {expanded === product.id && (
-                        <div className="mt-3 p-3 bg-gray-50 text-sm rounded-md max-h-60 overflow-y-auto transition-all duration-300 ease-in-out">
-                          <div className="mb-2">
-                            <strong>Описание:</strong>
-                            <p>{product.fullRu}</p>
-                            <p className="mt-1 text-gray-500">
-                              {product.fullDe}
-                            </p>
-                          </div>
-                          <div>
-                            <strong>Применение:</strong>
-                            <p>{product.usageRu}</p>
-                            <p className="mt-1 text-gray-500">
-                              {product.usageDe}
-                            </p>
-                          </div>
+                .filter(product => (product.category || "Без категории") === category)
+                .map(product => {
+                  const count = getProductCount(product.id);
+                  return (
+                    <div
+                      key={product.id}
+                      className="flex flex-col justify-between rounded-2xl shadow-md overflow-hidden bg-white transition-all duration-300 ease-in-out min-h-[620px]"
+                    >
+                      <div className="p-4 space-y-2">
+                        <img
+                          src={product.image}
+                          alt={product.nameRu}
+                          className="w-full h-48 object-contain mb-2"
+                        />
+                        <h2 className="text-lg font-semibold text-center">{product.nameRu}</h2>
+                        <p className="text-sm text-gray-500 text-center">{product.nameDe}</p>
+                        <p className="text-md mt-2 text-center">{product.shortRu}</p>
+                        <p className="text-sm text-gray-500 text-center">{product.shortDe}</p>
+                        <div className="mt-2 text-center font-semibold text-green-600">{product.price}</div>
+                        <div className="text-xs text-center text-gray-500">
+                          Артикул: {product.article || "—"}
                         </div>
-                      )}
+                        <div className="flex justify-center gap-2 mt-2">
+                          <button
+                            onClick={() => handleToggle(product.id)}
+                            className="text-sm px-4 py-1 bg-gray-100 rounded-full hover:bg-gray-200"
+                          >
+                            Подробнее / Mehr
+                          </button>
+                          {count === 0 ? (
+                            <button
+                              onClick={() => handleAddToCart(product)}
+                              className="text-sm px-4 py-1 bg-green-500 text-white rounded-full hover:bg-green-600"
+                            >
+                              В корзину
+                            </button>
+                          ) : (
+                            <div className="flex items-center gap-1">
+                              <button
+                                onClick={() => handleDecrement(product)}
+                                className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                              >–</button>
+                              <span className="mx-1 min-w-[20px] text-center font-semibold">{count}</span>
+                              <button
+                                onClick={() => handleIncrement(product)}
+                                className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
+                              >+</button>
+                            </div>
+                          )}
+                        </div>
+                        {expanded === product.id && (
+                          <div className="mt-3 p-3 bg-gray-50 text-sm rounded-md max-h-60 overflow-y-auto transition-all duration-300 ease-in-out">
+                            <div className="mb-2">
+                              <strong>Описание:</strong>
+                              <p>{product.fullRu}</p>
+                              <p className="mt-1 text-gray-500">{product.fullDe}</p>
+                            </div>
+                            <div>
+                              <strong>Применение:</strong>
+                              <p>{product.usageRu}</p>
+                              <p className="mt-1 text-gray-500">{product.usageDe}</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
           </div>
         ))}
       </main>
 
-      {/* Уведомление */}
+      {/* --- Уведомление --- */}
       {showNotification && (
         <div className="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
           Товар добавлен в корзину
