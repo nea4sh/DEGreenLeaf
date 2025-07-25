@@ -20,7 +20,7 @@ const products = [
   "usageDe": "Auf saubere, trockene Achselhaut morgens oder bei Bedarf auftragen. Nicht auf gereizter oder verletzter Haut anwenden.",
   "usageEn": "Apply to clean, dry underarms in the morning or as needed. Do not apply to irritated or broken skin.",
   "category": {
-    "code": "Личная гигиена",
+    "code": "personalcare",
     "ru": "Личная гигиена",
     "de": "Körperhygiene",
     "en": "Personal Hygiene"
@@ -44,7 +44,7 @@ const products = [
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen. Morgens und abends verwenden.",
   "usageEn": "Apply to wet skin on face and body, lather, massage gently, and rinse with water. Use morning and evening.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -68,7 +68,7 @@ const products = [
   "usageDe": "Nach der Reinigung und Tonisierung eine geeignete Menge auftragen, gleichmäßig verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
   "usageEn": "After cleansing and toning the skin, apply an appropriate amount of gel to the palm, spread evenly over the face, and gently massage until fully absorbed.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -92,7 +92,7 @@ const products = [
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen.",
   "usageEn": "Apply to wet skin, lather, massage gently, and rinse with water.",
   "category": {
-    "code": "Уход за кожей тела",
+    "code": "bodycare",
     "ru": "Уход за кожей тела",
     "de": "Körperpflege",
     "en": "Body Care"
@@ -116,7 +116,7 @@ const products = [
   "usageDe": "Auf trockene Kleidung sprühen, 3–5 Minuten einwirken lassen, dann per Hand oder Maschine waschen.",
   "usageEn": "Spray onto dry clothing, leave for 3–5 minutes, then wash by hand or machine.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -140,7 +140,7 @@ const products = [
   "usageDe": "Seife auf feuchten Stoff auftragen, reiben und gründlich mit Wasser abspülen.",
   "usageEn": "Apply soap to damp fabric, rub, then rinse thoroughly with water.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -164,7 +164,7 @@ const products = [
   "usageDe": "Handwäsche: 10–20 ml auf 3–5 l Wasser. Maschinenwäsche: 25–30 ml für 8–10 Teile.",
   "usageEn": "Hand wash: 10–20 ml per 3–5 L of water. Machine wash: 25–30 ml for 8–10 pieces of clothing.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -188,7 +188,7 @@ const products = [
   "usageDe": "Dosierung gemäß Tabelle auf der Verpackung. Für Hand- und Maschinenwäsche geeignet. Von Kindern fernhalten.",
   "usageEn": "Use dosage as indicated on the package. Suitable for both hand and machine washing. Keep out of reach of children.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -212,7 +212,7 @@ const products = [
   "usageDe": "Folie entfernen, Deckel öffnen und in den Kühlschrank stellen. Nicht ins Gefrierfach legen. Alle 2–3 Monate austauschen.",
   "usageEn": "Remove film, open the lid, and place in the refrigerator. Do not place in the freezer. Replace every 2–3 months.",
   "category": {
-    "code": "Эко-средства для дома",
+    "code": "ecohome",
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
@@ -236,7 +236,7 @@ const products = [
   "usageDe": "Auf einen Schwamm auftragen oder in Wasser verdünnen. Danach gründlich mit Wasser abspülen.",
   "usageEn": "Apply to a sponge or dilute in water. Rinse thoroughly with water after washing.",
   "category": {
-    "code": "Эко-средства для дома",
+    "code": "ecohome",
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
@@ -260,7 +260,7 @@ const products = [
   "usageDe": "Auf die Verschmutzung sprühen, 3–5 Minuten einwirken lassen, mit Tuch/Schwamm abwischen und mit Wasser abspülen.",
   "usageEn": "Spray on the stain, leave for 3–5 minutes, wipe with a cloth or sponge, and rinse with water.",
   "category": {
-    "code": "Эко-средства для дома",
+    "code": "ecohome",
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
@@ -284,7 +284,7 @@ const products = [
   "usageDe": "Aufsprühen, einige Sekunden einwirken lassen und abwischen. Für Obst/Gemüse: aufsprühen, 1–2 Minuten warten und gründlich abspülen.",
   "usageEn": "Spray onto surface, wait a few seconds, then wipe clean. For fruits/vegetables: spray, wait 1–2 minutes, then rinse thoroughly.",
   "category": {
-    "code": "Эко-средства для дома",
+    "code": "ecohome",
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
@@ -308,7 +308,7 @@ const products = [
   "usageDe": "Vermeiden Sie das Befeuchten der Verpackung und der restlichen Tücher. Bei empfindlichem Geschirr zuerst testen. Bei Augenkontakt mit Wasser spülen. Von Kindern und Tieren fernhalten.",
   "usageEn": "Avoid wetting the packaging and remaining cloths. Test on inconspicuous areas of valuable utensils first. Rinse thoroughly with water in case of eye contact. Keep out of reach of children and pets.",
   "category": {
-    "code": "Эко-средства для дома",
+    "code": "ecohome",
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
@@ -332,10 +332,10 @@ const products = [
   "usageDe": "Ein Tuch entnehmen und die verschmutzte Fläche abwischen. Bei Bedarf mit Wasser nachspülen.",
   "usageEn": "Take a wipe and clean the dirty surface. Rinse with water after use if necessary.",
   "category": {
-    "code": "Эко-средства для дома",
-    "ru": "Эко-средства для дома",
-    "de": "Öko-Haushaltsmittel",
-    "en": "Eco Home Products"
+    "code": "ecolaundry",
+    "ru": "Эко-средства для стирки",
+    "de": "Öko-Waschmittel",
+    "en": "Eco Laundry Products"
   }
 },
 {
@@ -356,7 +356,7 @@ const products = [
   "usageDe": "Geben Sie das Gel in das Waschmittelfach der Waschmaschine. Dosierung je nach Verschmutzungsgrad und Wäschemenge gemäß Verpackungsempfehlung.",
   "usageEn": "Add the gel to the detergent compartment of your washing machine. Follow the dosage instructions on the packaging based on the level of soiling and laundry load.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -380,7 +380,7 @@ const products = [
   "usageDe": "Geben Sie das Mittel je nach Wäschemenge in das Waschmittelfach. Anwendung gemäß den Angaben auf der Verpackung.",
   "usageEn": "Add the gel to the detergent compartment depending on laundry amount. Use according to instructions on the package.",
   "category": {
-    "code": "Эко-средства для стирки",
+    "code": "ecolaundry",
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
@@ -404,10 +404,10 @@ const products = [
   "usageDe": "Handwäsche: 20 ml auf 3–5 l Wasser, 10 Min einweichen, ausspülen. Maschine: passende Menge hinzufügen und Schonwaschgang wählen.",
   "usageEn": "For hand washing: dissolve 20 ml in 3–5 liters of water, soak for 10 minutes, rinse well. For machine washing: add the required amount and select the delicate cycle.",
   "category": {
-    "code": "Эко-средства для стирки",
-    "ru": "Эко-средства для стирки",
-    "de": "Öko-Waschmittel",
-    "en": "Eco Laundry Products"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -428,10 +428,10 @@ const products = [
   "usageDe": "Auf trockene, saubere Haut im Nackenbereich kleben. 6–12 Stunden einwirken lassen. Kurenweise anwenden. Kontakt mit offenen Wunden vermeiden.",
   "usageEn": "Apply to clean, dry skin on the neck area. Leave on for 6–12 hours. Use in courses. Avoid contact with open wounds.",
   "category": {
-    "code": "Товары для здоровья",
-    "ru": "Товары для здоровья",
-    "de": "Gesundheitsprodukte",
-    "en": "Health Products"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -452,10 +452,10 @@ const products = [
   "usageDe": "Auf die betroffenen Stellen 2–3 Mal täglich mit leichten, massierenden Bewegungen auftragen.",
   "usageEn": "Apply to problem areas with light massage movements 2–3 times a day.",
   "category": {
-    "code": "Товары для здоровья",
-    "ru": "Товары для здоровья",
-    "de": "Gesundheitsprodukte",
-    "en": "Health Products"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -472,7 +472,7 @@ const products = [
   "usageRu": "Растворите пакетик в 100 мл воды, принимайте 1–2 раза в день.",
   "usageDe": "Einen Beutel in 100 ml Wasser auflösen, 1–2 Mal täglich einnehmen.",
   "category": {
-    "code": "Здоровье",
+    "code": "health",
     "ru": "Здоровье",
     "de": "Gesundheit",
     "en": "Health"
@@ -492,10 +492,10 @@ const products = [
   "usageRu": "Откройте пакет и сразу употребляйте. Рекомендуемая дозировка — 2 пакета в день.",
   "usageDe": "Beutel öffnen und sofort trinken. Empfohlene Dosierung: 2 Beutel pro Tag.",
   "category": {
-    "code": "Здоровое питание",
-    "ru": "Здоровое питание",
-    "de": "Gesunde Ernährung",
-    "en": "Healthy Nutrition"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -512,10 +512,10 @@ const products = [
   "usageRu": "1. Налейте в чашку тёплую воду (~60°C). 2. Добавьте необходимое количество сухого молока. 3. Тщательно перемешайте до полного растворения. 4. Готово к употреблению. Пейте как можно скорее после приготовления. После открытия упаковки рекомендуется употребить в течение двух недель.",
   "usageDe": "1. Gießen Sie warmes Wasser (ca. 60°C) in eine Tasse. 2. Geben Sie die benötigte Menge Milchpulver hinzu. 3. Gründlich umrühren, bis das Pulver vollständig aufgelöst ist. 4. Sofort nach der Zubereitung trinken. Nach dem Öffnen innerhalb von zwei Wochen aufbrauchen.",
   "category": {
-    "code": "Здоровое питание",
-    "ru": "Здоровое питание",
-    "de": "Gesunde Ernährung",
-    "en": "Healthy Nutrition"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -532,10 +532,10 @@ const products = [
   "usageRu": "Заварите 1 пакетик (5 г) в 200 мл горячей воды, настаивайте 5–10 минут. Пейте в любое время дня.",
   "usageDe": "Einen Beutel (5 g) mit 200 ml heißem Wasser aufgießen, 5–10 Minuten ziehen lassen. Zu jeder Tageszeit genießen.",
   "category": {
-    "code": "Здоровое питание",
-    "ru": "Здоровое питание",
-    "de": "Gesunde Ernährung",
-    "en": "Healthy Nutrition"
+    "code": "health",
+    "ru": "Здоровье",
+    "de": "Gesundheit",
+    "en": "Health"
   }
 },
 {
@@ -552,7 +552,7 @@ const products = [
   "usageRu": "Используйте подушку для сна или отдыха для поддержки шеи и расслабления мышц.",
   "usageDe": "Verwenden Sie das Kissen beim Schlafen oder Ausruhen zur Unterstützung des Nackens und zur Entspannung der Muskulatur.",
   "category": {
-    "code": "Здоровье",
+    "code": "health",
     "ru": "Здоровье",
     "de": "Gesundheit",
     "en": "Health"
@@ -572,7 +572,7 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи утром и вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge der Creme morgens und abends nach der Reinigung und Tonisierung auf Gesicht und Hals auf. Sanft einmassieren, bis sie vollständig eingezogen ist.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -592,7 +592,7 @@ const products = [
   "usageRu": "Наносите крем на лицо и шею после очищения и тонизирования вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung auf Gesicht und Hals auftragen. Sanft einmassieren, bis die Creme vollständig eingezogen ist.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -612,7 +612,7 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -632,7 +632,7 @@ const products = [
   "usageRu": "Нанесите тонер на очищенную кожу лица и шеи с помощью ватного диска или ладонями. Используйте утром и вечером перед нанесением крема.",
   "usageDe": "Tragen Sie das Tonikum morgens und abends nach der Reinigung mit einem Wattepad oder den Händen auf Gesicht und Hals auf. Anschließend Creme verwenden.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -652,7 +652,7 @@ const products = [
   "usageRu": "Нанесите небольшое количество сыворотки на очищенную кожу лица и шеи утром и/или вечером. Аккуратно распределите до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge des Serums morgens und/oder abends nach der Reinigung auf Gesicht und Hals auf und massieren Sie es sanft ein.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -672,7 +672,7 @@ const products = [
   "usageRu": "После очищения и тонизирования нанесите небольшое количество крема на кожу лица и шеи. Равномерно распределите легкими массирующими движениями до полного впитывания. Используйте утром и/или вечером.",
   "usageDe": "Nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist. Morgens und/oder abends verwenden.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -692,7 +692,7 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную область вокруг глаз утром и вечером. Легкими похлопывающими движениями распределите до полного впитывания.",
   "usageDe": "Tragen Sie morgens und abends eine kleine Menge der Creme auf die gereinigte Augenpartie auf und klopfen Sie sie sanft ein, bis sie vollständig eingezogen ist.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -712,7 +712,7 @@ const products = [
   "usageRu": "После очищения кожи аккуратно открутите капсулу, равномерно распределите масло на лицо и помассируйте до полного впитывания.",
   "usageDe": "Nach der Reinigung eine Kapsel öffnen, das Öl gleichmäßig im Gesicht verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -732,7 +732,7 @@ const products = [
   "usageRu": "На очищенную кожу лица нанесите маску равномерно, оставьте на 10–15 минут, затем удалите мягким полотенцем и смойте теплой водой.",
   "usageDe": "Nach der Reinigung großzügig auf das Gesicht auftragen, 10–15 Minuten einwirken lassen, dann mit einem weichen Tuch entfernen und mit warmem Wasser abspülen.",
   "category": {
-    "code": "Уход за кожей лица",
+    "code": "facecare",
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
@@ -741,19 +741,18 @@ const products = [
 ];
   
 
-// --- Категории (можно дополнять)
 const categories = [
-  { code: "deodorant", ru: "Дезодоранты", de: "Deodorants", en: "Deodorants" },
-  { code: "Личная гигиена", ru: "Личная гигиена", de: "Körperhygiene", en: "Personal Hygiene" },
-  { code: "Уход за кожей лица", ru: "Уход за кожей лица", de: "Gesichtspflege", en: "Facial Care" },
-  { code: "Эко-средства для дома", ru: "Эко-средства для дома", de: "Öko-Haushaltsmittel", en: "Eco Home Products" },
-  { code: "Декоративная косметика", ru: "Декоративная косметика", de: "Dekorative Kosmetik", en: "Decorative Cosmetics" },
-  { code: "Уход за кожей тела", ru: "Уход за кожей тела", de: "Körperpflege", en: "Body Care" },
-  { code: "Уход для волос", ru: "Уход для волос", de: "Haarpflege", en: "Hair Care" },
-  { code: "Гигиена полости рта", ru: "Гигиена полости рта", de: "Mundhygiene", en: "Oral Hygiene" },
-  { code: "Товары для детей", ru: "Товары для детей", de: "Produkte für Kinder", en: "Products for Children" },
-  { code: "Здоровье", ru: "Здоровье", de: "Gesundheit", en: "Health" },
-  { code: "Эко-средства для стирки", ru: "Эко-средства для стирки", de: "Öko-Waschmittel", en: "Eco Laundry Products" },
+  { code: "deodorant",        ru: "Дезодоранты",           de: "Deodorants",             en: "Deodorants" },
+  { code: "personalcare",     ru: "Личная гигиена",        de: "Körperhygiene",          en: "Personal Hygiene" },
+  { code: "facecare",         ru: "Уход за кожей лица",    de: "Gesichtspflege",         en: "Facial Care" },
+  { code: "ecohome",          ru: "Эко-средства для дома", de: "Öko-Haushaltsmittel",    en: "Eco Home Products" },
+  { code: "makeup",           ru: "Декоративная косметика",de: "Dekorative Kosmetik",    en: "Decorative Cosmetics" },
+  { code: "bodycare",         ru: "Уход за кожей тела",    de: "Körperpflege",           en: "Body Care" },
+  { code: "haircare",         ru: "Уход для волос",        de: "Haarpflege",             en: "Hair Care" },
+  { code: "oralcare",         ru: "Гигиена полости рта",   de: "Mundhygiene",            en: "Oral Hygiene" },
+  { code: "kids",             ru: "Товары для детей",      de: "Produkte für Kinder",    en: "Products for Children" },
+  { code: "health",           ru: "Здоровье",              de: "Gesundheit",             en: "Health" },
+  { code: "ecolaundry",       ru: "Эко-средства для стирки",de: "Öko-Waschmittel",       en: "Eco Laundry Products" }
 ];
 
 // --- Флаги PNG
