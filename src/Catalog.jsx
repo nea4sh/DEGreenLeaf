@@ -719,44 +719,86 @@ export default function Catalog() {
     <div>
       {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
     <style>{`
-body, .bg-green-50 { background: #e9faee !important; }
+body, .bg-green-50 {
+  background: #e9faee !important;
+}
 
 .catalog-header {
-  background: #fff; box-shadow: 0 3px 10px 0 rgba(60,90,70,0.04);
-  position: sticky; top: 0; z-index: 10; width: 100%;
-  display: flex; flex-direction: column; align-items: stretch; padding: 0;
+  background: #fff;
+  box-shadow: 0 3px 10px 0 rgba(60,90,70,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
 }
 .catalog-header-row {
-  display: flex; align-items: center; justify-content: space-between;
-  max-width: 1100px; margin: 0 auto; padding: 12px 10px 4px 10px; min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 10px 4px 10px;
+  min-height: 72px;
 }
 .catalog-flags { display: flex; gap: 7px; }
 .catalog-flag-btn {
-  background: none; border: none; padding: 0;
-  outline: none; border-radius: 50%; border: 2px solid transparent;
-  transition: border 0.2s; width: 38px; height: 38px;
-  display: flex; align-items: center; justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .catalog-flag-btn.active { border: 2px solid #30bc6c; }
 .catalog-logo {
-  max-height: 90px; max-width: 330px; object-fit: contain; background: transparent; margin: 0;
+  max-height: 90px;
+  max-width: 330px;
+  object-fit: contain;
+  background: transparent;
+  margin: 0;
 }
 .catalog-header-actions { display: flex; align-items: center; gap: 16px; }
 .catalog-search {
-  display: flex; align-items: center; background: #f3f7f4;
-  border-radius: 20px; padding: 6px 15px; font-size: 17px;
+  display: flex;
+  align-items: center;
+  background: #f3f7f4;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 17px;
 }
 .catalog-search input {
-  border: none; background: none; outline: none;
-  font-size: 17px; width: 130px; min-width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 17px;
+  width: 130px;
+  min-width: 0;
 }
 .catalog-cart-btn { background: none; border: none; padding: 0; position: relative; }
 .catalog-cart-img { width: 38px; height: 38px; }
 .catalog-cart-count {
-  position: absolute; top: -5px; right: -5px;
-  background: #30bc6c; color: #fff; font-size: 14px; border-radius: 100%;
-  padding: 0 7px; min-width: 19px; text-align: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #30bc6c;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 100%;
+  padding: 0 7px;
+  min-width: 19px;
+  text-align: center;
 }
+
 /* -- КАТЕГОРИИ -- */
 .catalog-categories {
   display: flex;
@@ -785,38 +827,41 @@ body, .bg-green-50 { background: #e9faee !important; }
   box-sizing: border-box;
 }
 .catalog-cat-btn.active {
-  background: #30bc6c; color: #fff; border-color: #23a45a;
+  background: #30bc6c;
+  color: #fff;
+  border-color: #23a45a;
 }
-/* --- КАРТОЧКИ --- */
+
+/* --- КАРТОЧКИ (обновлено) --- */
 .catalog-products {
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: stretch;
   max-width: 1100px;
   gap: 26px;
   padding: 0 12px;
 }
-.catalog-products > .catalog-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 .catalog-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
-  padding: 20px 16px 18px 16px;
+  flex: 1 1 calc((100% - 52px) / 3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
-  margin-top: 0;
-  min-height: 370px;
-  height: 100%;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(60,90,70,0.07);
+  padding: 20px 16px 18px;
   box-sizing: border-box;
+  transition: box-shadow 0.2s;
 }
-.catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
+.catalog-card img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 13px;
+  object-fit: contain;
+  background: transparent;
+}
 .catalog-card-title {
   font-weight: 700;
   font-size: 20px;
@@ -824,7 +869,6 @@ body, .bg-green-50 { background: #e9faee !important; }
   margin-bottom: 3px;
   width: 100%;
   word-break: break-word;
-  /* НЕ обрезаем! */
   min-height: 48px;
 }
 .catalog-card-desc {
@@ -836,64 +880,61 @@ body, .bg-green-50 { background: #e9faee !important; }
   word-break: break-word;
   min-height: 34px;
 }
-.catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
-.catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
-.catalog-card-btns { display: flex; gap: 10px; width: 100%; justify-content: center; margin-top: auto;}
-.catalog-card-btn { border: none; border-radius: 20px; padding: 7px 17px; font-size: 15px; font-weight: 500; cursor: pointer; background: #e8f9ef; color: #23a45a; transition: background 0.13s; }
-.catalog-card-btn.green { background: #30bc6c; color: #fff; }
-.catalog-card-details { font-size: 14px; background: #f4fbf6; margin-top: 10px; padding: 10px 13px; border-radius: 12px; width: 100%; }
+.catalog-card-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #30bc6c;
+  margin-bottom: 2px;
+}
+.catalog-card-article {
+  font-size: 12px;
+  color: #a7b3a7;
+  margin-bottom: 8px;
+}
+.catalog-card-details {
+  font-size: 14px;
+  background: #f4fbf6;
+  margin-top: 10px;
+  padding: 10px 13px;
+  border-radius: 12px;
+  width: 100%;
+}
+.catalog-card-btns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+.catalog-card-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 7px 17px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #e8f9ef;
+  color: #23a45a;
+  transition: background 0.13s;
+}
+.catalog-card-btn.green {
+  background: #30bc6c;
+  color: #fff;
+}
 
-/* --- Адаптив --- */
+/* --- АДАПТИВ --- */
 @media (max-width: 950px) {
-  .catalog-products { grid-template-columns: repeat(2, 1fr); }
+  .catalog-card {
+    flex: 1 1 calc((100% - 26px) / 2);
+  }
 }
 @media (max-width: 600px) {
-  .catalog-header-row { flex-direction: column; gap: 10px; }
-  .catalog-logo { max-width: 160px; max-height: 60px; }
-  .catalog-products { gap: 10px; grid-template-columns: repeat(2, 1fr); padding: 0 2vw;}
   .catalog-card {
-    padding: 10px 5px 10px 5px;
-    min-height: 220px;
-    max-width: 98vw;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  .catalog-card-title {
-    font-size: 15px;
-    margin-bottom: 2px;
-    width: 100%;
-    word-break: break-word;
-    min-height: 34px;
-  }
-  .catalog-card-desc {
-    font-size: 12px;
-    margin-bottom: 6px;
-    width: 100%;
-    word-break: break-word;
-    min-height: 24px;
-  }
-  .catalog-categories {
-    gap: 5px 5px !important;
-    padding: 7px 0 3px 0 !important;
-    justify-content: flex-start;
-  }
-  .catalog-cat-btn {
-    padding: 6px 10px;
-    font-size: 15px;
-    min-width: 95px;
-    max-width: 47vw;
-    flex: 1 1 120px;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 `}</style>
-
-
-
-
-
-
-
 
 
 
