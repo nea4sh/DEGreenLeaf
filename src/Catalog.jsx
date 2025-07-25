@@ -58,9 +58,8 @@ const products = [
   "usageDe": "Nach der Reinigung und Tonisierung eine geeignete Menge auftragen, gleichmäßig verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
   "usageEn": "After cleansing and toning the skin, apply an appropriate amount of gel to the palm, spread evenly over the face, and gently massage until fully absorbed.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 4,
   "nameRu": "Шёлковое мыло с нитями фиброина",
   "nameDe": "Seife mit Seidenfaser-Fibroin",
@@ -78,9 +77,8 @@ const products = [
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen.",
   "usageEn": "Apply to wet skin, lather, massage gently, and rinse with water.",
   "category": "bodycare"
-  }
-},
-{
+  },
+  {
   "id": 5,
   "nameRu": "Высокоэффективное средство для удаления стойких загрязнений",
   "nameDe": "Hocheffektiver Fleckenentferner",
@@ -98,9 +96,8 @@ const products = [
   "usageDe": "Auf trockene Kleidung sprühen, 3–5 Minuten einwirken lassen, dann per Hand oder Maschine waschen.",
   "usageEn": "Spray onto dry clothing, leave for 3–5 minutes, then wash by hand or machine.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 6,
   "nameRu": "Хозяйственное мыло с содой и энзимами",
   "nameDe": "Hausseife mit Soda und Enzymen",
@@ -118,9 +115,8 @@ const products = [
   "usageDe": "Seife auf feuchten Stoff auftragen, reiben und gründlich mit Wasser abspülen.",
   "usageEn": "Apply soap to damp fabric, rub, then rinse thoroughly with water.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 7,
   "nameRu": "Микромолекулярный гель для стирки на растительной основе",
   "nameDe": "Mikromolekulares Waschgel auf Pflanzenbasis",
@@ -138,9 +134,8 @@ const products = [
   "usageDe": "Handwäsche: 10–20 ml auf 3–5 l Wasser. Maschinenwäsche: 25–30 ml für 8–10 Teile.",
   "usageEn": "Hand wash: 10–20 ml per 3–5 L of water. Machine wash: 25–30 ml for 8–10 pieces of clothing.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 8,
   "nameRu": "Антибактериальный гель для стирки с экстрактом бамбука",
   "nameDe": "Antibakterielles Waschgel mit Bambusextrakt",
@@ -158,9 +153,8 @@ const products = [
   "usageDe": "Dosierung gemäß Tabelle auf der Verpackung. Für Hand- und Maschinenwäsche geeignet. Von Kindern fernhalten.",
   "usageEn": "Use dosage as indicated on the package. Suitable for both hand and machine washing. Keep out of reach of children.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 9,
   "nameRu": "Дезодоратор для холодильника",
   "nameDe": "Kühlschrank-Deodorant",
@@ -178,9 +172,8 @@ const products = [
   "usageDe": "Folie entfernen, Deckel öffnen und in den Kühlschrank stellen. Nicht ins Gefrierfach legen. Alle 2–3 Monate austauschen.",
   "usageEn": "Remove film, open the lid, and place in the refrigerator. Do not place in the freezer. Replace every 2–3 months.",
   "category": "ecohome"
-  }
-},
-{
+  },
+  {
   "id": 10,
   "nameRu": "Моющее средство для посуды",
   "nameDe": "Geschirrspülmittel",
@@ -198,9 +191,8 @@ const products = [
   "usageDe": "Auf einen Schwamm auftragen oder in Wasser verdünnen. Danach gründlich mit Wasser abspülen.",
   "usageEn": "Apply to a sponge or dilute in water. Rinse thoroughly with water after washing.",
   "category": "ecohome"
-  }
-},
-{
+  },
+  {
   "id": 11,
   "nameRu": "Кухонное средство для удаления пятен от тяжелого масла",
   "nameDe": "Küchenmittel gegen hartnäckige Ölflecken",
@@ -218,9 +210,8 @@ const products = [
   "usageDe": "Auf die Verschmutzung sprühen, 3–5 Minuten einwirken lassen, mit Tuch/Schwamm abwischen und mit Wasser abspülen.",
   "usageEn": "Spray on the stain, leave for 3–5 minutes, wipe with a cloth or sponge, and rinse with water.",
   "category": "ecohome"
-  }
-},
-{
+  },
+  {
   "id": 12,
   "nameRu": "Многофункциональная электролизная вода",
   "nameDe": "Multifunktionales Elektrolytwasser",
@@ -238,9 +229,8 @@ const products = [
   "usageDe": "Aufsprühen, einige Sekunden einwirken lassen und abwischen. Für Obst/Gemüse: aufsprühen, 1–2 Minuten warten und gründlich abspülen.",
   "usageEn": "Spray onto surface, wait a few seconds, then wipe clean. For fruits/vegetables: spray, wait 1–2 minutes, then rinse thoroughly.",
   "category": "ecohome"
-  }
-},
-{
+  },
+  {
   "id": 13,
   "nameRu": "Салфетка для посуды с пузырьками",
   "nameDe": "Geschirrreinigungstuch mit Bläschen",
@@ -258,9 +248,8 @@ const products = [
   "usageDe": "Vermeiden Sie das Befeuchten der Verpackung und der restlichen Tücher. Bei empfindlichem Geschirr zuerst testen. Bei Augenkontakt mit Wasser spülen. Von Kindern und Tieren fernhalten.",
   "usageEn": "Avoid wetting the packaging and remaining cloths. Test on inconspicuous areas of valuable utensils first. Rinse thoroughly with water in case of eye contact. Keep out of reach of children and pets.",
   "category": "ecohome"
-  }
-},
-{
+  },
+  {
   "id": 14,
   "nameRu": "Очищающие влажные салфетки для кухни",
   "nameDe": "Reinigungstücher für die Küche",
@@ -278,9 +267,8 @@ const products = [
   "usageDe": "Ein Tuch entnehmen und die verschmutzte Fläche abwischen. Bei Bedarf mit Wasser nachspülen.",
   "usageEn": "Take a wipe and clean the dirty surface. Rinse with water after use if necessary.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 16,
   "nameRu": "Отбеливающий гель для стирки с энзимами 2 кг",
   "nameDe": "Bleich-Waschgel mit Enzymen 2 kg",
@@ -298,9 +286,8 @@ const products = [
   "usageDe": "Geben Sie das Gel in das Waschmittelfach der Waschmaschine. Dosierung je nach Verschmutzungsgrad und Wäschemenge gemäß Verpackungsempfehlung.",
   "usageEn": "Add the gel to the detergent compartment of your washing machine. Follow the dosage instructions on the packaging based on the level of soiling and laundry load.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 17,
   "nameRu": "Антибактериальный гель для стирки с экстрактом бамбука 1 кг",
   "nameDe": "Antibakterielles Waschgel mit Bambusextrakt 1 kg",
@@ -318,9 +305,8 @@ const products = [
   "usageDe": "Geben Sie das Mittel je nach Wäschemenge in das Waschmittelfach. Anwendung gemäß den Angaben auf der Verpackung.",
   "usageEn": "Add the gel to the detergent compartment depending on laundry amount. Use according to instructions on the package.",
   "category": "ecolaundry"
-  }
-},
-{
+  },
+  {
   "id": 18,
   "nameRu": "Средство для стирки натурального шёлка и шерсти 800 мл",
   "nameDe": "Waschmittel für Naturseide und Wolle 800 ml",
@@ -338,9 +324,8 @@ const products = [
   "usageDe": "Handwäsche: 20 ml auf 3–5 l Wasser, 10 Min einweichen, ausspülen. Maschine: passende Menge hinzufügen und Schonwaschgang wählen.",
   "usageEn": "For hand washing: dissolve 20 ml in 3–5 liters of water, soak for 10 minutes, rinse well. For machine washing: add the required amount and select the delicate cycle.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 19,
   "nameRu": "Пластырь от холки",
   "nameDe": "Pflaster gegen Nackenverspannungen",
@@ -358,9 +343,8 @@ const products = [
   "usageDe": "Auf trockene, saubere Haut im Nackenbereich kleben. 6–12 Stunden einwirken lassen. Kurenweise anwenden. Kontakt mit offenen Wunden vermeiden.",
   "usageEn": "Apply to clean, dry skin on the neck area. Leave on for 6–12 hours. Use in courses. Avoid contact with open wounds.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 20,
   "nameRu": "CARICH Питательный расслабляющий бальзам на травах",
   "nameDe": "CARICH Nährender entspannender Kräuterbalsam",
@@ -378,9 +362,8 @@ const products = [
   "usageDe": "Auf die betroffenen Stellen 2–3 Mal täglich mit leichten, massierenden Bewegungen auftragen.",
   "usageEn": "Apply to problem areas with light massage movements 2–3 times a day.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 21,
   "nameRu": "Растворимый напиток со спирулиной и пробиотиками 2 г x 20",
   "nameDe": "Instantgetränk mit Spirulina und Probiotika 2 g x 20",
@@ -394,9 +377,8 @@ const products = [
   "usageRu": "Растворите пакетик в 100 мл воды, принимайте 1–2 раза в день.",
   "usageDe": "Einen Beutel in 100 ml Wasser auflösen, 1–2 Mal täglich einnehmen.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 22,
   "nameRu": "Питательный напиток с кальцием, магнием и цинком 300 мл",
   "nameDe": "Nährstoffgetränk mit Calcium, Magnesium und Zink 300 ml",
@@ -410,9 +392,8 @@ const products = [
   "usageRu": "Откройте пакет и сразу употребляйте. Рекомендуемая дозировка — 2 пакета в день.",
   "usageDe": "Beutel öffnen und sofort trinken. Empfohlene Dosierung: 2 Beutel pro Tag.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 23,
   "nameRu": "Сухое верблюжье молоко с пробиотиками 500 г",
   "nameDe": "Kamelmilchpulver mit Probiotika 500 g",
@@ -426,9 +407,8 @@ const products = [
   "usageRu": "1. Налейте в чашку тёплую воду (~60°C). 2. Добавьте необходимое количество сухого молока. 3. Тщательно перемешайте до полного растворения. 4. Готово к употреблению. Пейте как можно скорее после приготовления. После открытия упаковки рекомендуется употребить в течение двух недель.",
   "usageDe": "1. Gießen Sie warmes Wasser (ca. 60°C) in eine Tasse. 2. Geben Sie die benötigte Menge Milchpulver hinzu. 3. Gründlich umrühren, bis das Pulver vollständig aufgelöst ist. 4. Sofort nach der Zubereitung trinken. Nach dem Öffnen innerhalb von zwei Wochen aufbrauchen.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 24,
   "nameRu": "Чай из кукурузных рылец 150 г",
   "nameDe": "Tee aus Maisbart 150 g",
@@ -442,9 +422,8 @@ const products = [
   "usageRu": "Заварите 1 пакетик (5 г) в 200 мл горячей воды, настаивайте 5–10 минут. Пейте в любое время дня.",
   "usageDe": "Einen Beutel (5 g) mit 200 ml heißem Wasser aufgießen, 5–10 Minuten ziehen lassen. Zu jeder Tageszeit genießen.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 25,
   "nameRu": "Массажная подушка из натурального латекса",
   "nameDe": "Massagekissen aus Naturlatex",
@@ -458,9 +437,8 @@ const products = [
   "usageRu": "Используйте подушку для сна или отдыха для поддержки шеи и расслабления мышц.",
   "usageDe": "Verwenden Sie das Kissen beim Schlafen oder Ausruhen zur Unterstützung des Nackens und zur Entspannung der Muskulatur.",
   "category": "health"
-  }
-},
-{
+  },
+  {
   "id": 26,
   "nameRu": "SEALUXE Глубоко увлажняющий крем с морской эссенцией 50 г",
   "nameDe": "SEALUXE Tiefenfeuchtigkeitscreme mit Meeresessenz 50 g",
@@ -474,9 +452,8 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи утром и вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge der Creme morgens und abends nach der Reinigung und Tonisierung auf Gesicht und Hals auf. Sanft einmassieren, bis sie vollständig eingezogen ist.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 27,
   "nameRu": "Подтягивающий крем с эффектом лифтинга (50 г)",
   "nameDe": "Straffende Lifting-Creme (50 g)",
@@ -490,9 +467,8 @@ const products = [
   "usageRu": "Наносите крем на лицо и шею после очищения и тонизирования вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung auf Gesicht und Hals auftragen. Sanft einmassieren, bis die Creme vollständig eingezogen ist.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 28,
   "nameRu": "SEALUXE Ночной увлажняющий крем 50 г",
   "nameDe": "SEALUXE Nacht-Feuchtigkeitscreme 50 g",
@@ -506,9 +482,8 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную и тонизированную кожу лица и шеи вечером. Аккуратно массируйте до полного впитывания.",
   "usageDe": "Abends nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 29,
   "nameRu": "SEALUXE Омолаживающий тонер (210 мл)",
   "nameDe": "SEALUXE Verjüngender Toner (210 ml)",
@@ -522,9 +497,8 @@ const products = [
   "usageRu": "Нанесите тонер на очищенную кожу лица и шеи с помощью ватного диска или ладонями. Используйте утром и вечером перед нанесением крема.",
   "usageDe": "Tragen Sie das Tonikum morgens und abends nach der Reinigung mit einem Wattepad oder den Händen auf Gesicht und Hals auf. Anschließend Creme verwenden.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 30,
   "nameRu": "SEALUXE сыворотка с пробиотиками 40 мл",
   "nameDe": "SEALUXE Probiotisches Serum 40 ml",
@@ -538,9 +512,8 @@ const products = [
   "usageRu": "Нанесите небольшое количество сыворотки на очищенную кожу лица и шеи утром и/или вечером. Аккуратно распределите до полного впитывания.",
   "usageDe": "Tragen Sie eine kleine Menge des Serums morgens und/oder abends nach der Reinigung auf Gesicht und Hals auf und massieren Sie es sanft ein.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 31,
   "nameRu": "SEALUXE Интенсивно увлажняющий крем с жемчугом (30 г)",
   "nameDe": "SEALUXE Intensiv feuchtigkeitsspendende Perlencreme (30 g)",
@@ -554,9 +527,8 @@ const products = [
   "usageRu": "После очищения и тонизирования нанесите небольшое количество крема на кожу лица и шеи. Равномерно распределите легкими массирующими движениями до полного впитывания. Используйте утром и/или вечером.",
   "usageDe": "Nach der Reinigung und Tonisierung eine kleine Menge der Creme auf Gesicht und Hals auftragen und sanft einmassieren, bis sie vollständig eingezogen ist. Morgens und/oder abends verwenden.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 32,
   "nameRu": "SEALUXE Крем для кожи вокруг глаз против морщин с проксиланом (20 г)",
   "nameDe": "SEALUXE Anti-Falten Augencreme mit Proxylan (20 g)",
@@ -570,9 +542,8 @@ const products = [
   "usageRu": "Нанесите небольшое количество крема на очищенную область вокруг глаз утром и вечером. Легкими похлопывающими движениями распределите до полного впитывания.",
   "usageDe": "Tragen Sie morgens und abends eine kleine Menge der Creme auf die gereinigte Augenpartie auf und klopfen Sie sie sanft ein, bis sie vollständig eingezogen ist.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 33,
   "nameRu": "Капсульное масло‑эссенция Camellia (30 капсул × 0,5 мл)",
   "nameDe": "Kamelienöl-Essenz in Kapseln (30 Kapseln × 0,5 ml)",
@@ -586,9 +557,8 @@ const products = [
   "usageRu": "После очищения кожи аккуратно открутите капсулу, равномерно распределите масло на лицо и помассируйте до полного впитывания.",
   "usageDe": "Nach der Reinigung eine Kapsel öffnen, das Öl gleichmäßig im Gesicht verteilen und sanft einmassieren, bis es vollständig eingezogen ist.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 34,
   "nameRu": "SEALUXE Легкая маска для лица с камелией",
   "nameDe": "SEALUXE Leichte Gesichtsmaske mit Kamelie",
@@ -603,7 +573,6 @@ const products = [
   "usageDe": "Nach der Reinigung großzügig auf das Gesicht auftragen, 10–15 Minuten einwirken lassen, dann mit einem weichen Tuch entfernen und mit warmem Wasser abspülen.",
   "category": "facecare"
   }
- }
 ];
   
 
