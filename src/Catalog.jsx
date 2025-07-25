@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 
 // ВСТАВЬ СВОЙ МАССИВ PRODUCTS СЮДА (пример ниже)
 const products = [
+[
   {
   "id": 1,
   "nameRu": "Шариковый дезодорант-антиперспирант",
@@ -705,6 +706,7 @@ const products = [
     "de": "Gesichtspflege",
     "en": "Facial Care"
   }
+]
   
   
   // ... все твои товары!
