@@ -718,7 +718,7 @@ export default function Catalog() {
   return (
     <div>
       {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
-     <style>
+     <style>{`
 body, .bg-green-50 { background: #e9faee !important; }
 .catalog-header {
   background: #fff; box-shadow: 0 3px 10px 0 rgba(60, 90, 70, 0.04);
@@ -806,8 +806,8 @@ body, .bg-green-50 { background: #e9faee !important; }
   .catalog-products { gap: 11px; grid-template-columns: repeat(2, 1fr); }
   .catalog-card { padding: 12px 7px 13px 7px; min-height: 330px; }
   .catalog-card img { max-width: 64px; max-height: 64px; }
-}
-</style>
+
+`}</style>
 
 
 
