@@ -24,8 +24,9 @@ const products = [
     "ru": "Личная гигиена",
     "de": "Körperhygiene",
     "en": "Personal Hygiene"
-  },
-  {
+  }
+},
+{
   "id": 2,
   "nameRu": "Мыло от прыщей с эфирным маслом чайного дерева",
   "nameDe": "Akne-Seife mit Teebaumöl",
@@ -47,8 +48,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 3,
   "nameRu": "Успокаивающий увлажняющий крем с алоэ вера",
   "nameDe": "Beruhigende Feuchtigkeitscreme mit Aloe Vera",
@@ -70,8 +72,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 4,
   "nameRu": "Шёлковое мыло с нитями фиброина",
   "nameDe": "Seife mit Seidenfaser-Fibroin",
@@ -93,8 +96,9 @@ const products = [
     "ru": "Уход за кожей тела",
     "de": "Körperpflege",
     "en": "Body Care"
-  },
-  {
+  }
+},
+{
   "id": 5,
   "nameRu": "Высокоэффективное средство для удаления стойких загрязнений",
   "nameDe": "Hocheffektiver Fleckenentferner",
@@ -116,8 +120,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 6,
   "nameRu": "Хозяйственное мыло с содой и энзимами",
   "nameDe": "Hausseife mit Soda und Enzymen",
@@ -139,8 +144,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 7,
   "nameRu": "Микромолекулярный гель для стирки на растительной основе",
   "nameDe": "Mikromolekulares Waschgel auf Pflanzenbasis",
@@ -162,8 +168,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 8,
   "nameRu": "Антибактериальный гель для стирки с экстрактом бамбука",
   "nameDe": "Antibakterielles Waschgel mit Bambusextrakt",
@@ -185,8 +192,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 9,
   "nameRu": "Дезодоратор для холодильника",
   "nameDe": "Kühlschrank-Deodorant",
@@ -208,8 +216,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 10,
   "nameRu": "Моющее средство для посуды",
   "nameDe": "Geschirrspülmittel",
@@ -231,8 +240,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 11,
   "nameRu": "Кухонное средство для удаления пятен от тяжелого масла",
   "nameDe": "Küchenmittel gegen hartnäckige Ölflecken",
@@ -254,8 +264,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 12,
   "nameRu": "Многофункциональная электролизная вода",
   "nameDe": "Multifunktionales Elektrolytwasser",
@@ -277,8 +288,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 13,
   "nameRu": "Салфетка для посуды с пузырьками",
   "nameDe": "Geschirrreinigungstuch mit Bläschen",
@@ -300,8 +312,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 14,
   "nameRu": "Очищающие влажные салфетки для кухни",
   "nameDe": "Reinigungstücher für die Küche",
@@ -323,8 +336,9 @@ const products = [
     "ru": "Эко-средства для дома",
     "de": "Öko-Haushaltsmittel",
     "en": "Eco Home Products"
-  },
-  {
+  }
+},
+{
   "id": 16,
   "nameRu": "Отбеливающий гель для стирки с энзимами 2 кг",
   "nameDe": "Bleich-Waschgel mit Enzymen 2 kg",
@@ -346,8 +360,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 17,
   "nameRu": "Антибактериальный гель для стирки с экстрактом бамбука 1 кг",
   "nameDe": "Antibakterielles Waschgel mit Bambusextrakt 1 kg",
@@ -369,8 +384,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 18,
   "nameRu": "Средство для стирки натурального шёлка и шерсти 800 мл",
   "nameDe": "Waschmittel für Naturseide und Wolle 800 ml",
@@ -392,8 +408,9 @@ const products = [
     "ru": "Эко-средства для стирки",
     "de": "Öko-Waschmittel",
     "en": "Eco Laundry Products"
-  },
-  {
+  }
+},
+{
   "id": 19,
   "nameRu": "Пластырь от холки",
   "nameDe": "Pflaster gegen Nackenverspannungen",
@@ -415,8 +432,9 @@ const products = [
     "ru": "Товары для здоровья",
     "de": "Gesundheitsprodukte",
     "en": "Health Products"
-  },
-  {
+  }
+},
+{
   "id": 20,
   "nameRu": "CARICH Питательный расслабляющий бальзам на травах",
   "nameDe": "CARICH Nährender entspannender Kräuterbalsam",
@@ -438,8 +456,9 @@ const products = [
     "ru": "Товары для здоровья",
     "de": "Gesundheitsprodukte",
     "en": "Health Products"
-  },
-  {
+  }
+},
+{
   "id": 21,
   "nameRu": "Растворимый напиток со спирулиной и пробиотиками 2 г x 20",
   "nameDe": "Instantgetränk mit Spirulina und Probiotika 2 g x 20",
@@ -457,8 +476,9 @@ const products = [
     "ru": "Здоровье",
     "de": "Gesundheit",
     "en": "Health"
-  },
-  {
+  }
+},
+{
   "id": 22,
   "nameRu": "Питательный напиток с кальцием, магнием и цинком 300 мл",
   "nameDe": "Nährstoffgetränk mit Calcium, Magnesium und Zink 300 ml",
@@ -476,8 +496,9 @@ const products = [
     "ru": "Здоровое питание",
     "de": "Gesunde Ernährung",
     "en": "Healthy Nutrition"
-  },
-  {
+  }
+},
+{
   "id": 23,
   "nameRu": "Сухое верблюжье молоко с пробиотиками 500 г",
   "nameDe": "Kamelmilchpulver mit Probiotika 500 g",
@@ -495,8 +516,9 @@ const products = [
     "ru": "Здоровое питание",
     "de": "Gesunde Ernährung",
     "en": "Healthy Nutrition"
-  },
-  {
+  }
+},
+{
   "id": 24,
   "nameRu": "Чай из кукурузных рылец 150 г",
   "nameDe": "Tee aus Maisbart 150 g",
@@ -514,8 +536,9 @@ const products = [
     "ru": "Здоровое питание",
     "de": "Gesunde Ernährung",
     "en": "Healthy Nutrition"
-  },
-  {
+  }
+},
+{
   "id": 25,
   "nameRu": "Массажная подушка из натурального латекса",
   "nameDe": "Massagekissen aus Naturlatex",
@@ -533,8 +556,9 @@ const products = [
     "ru": "Здоровье",
     "de": "Gesundheit",
     "en": "Health"
-  },
-  {
+  }
+},
+{
   "id": 26,
   "nameRu": "SEALUXE Глубоко увлажняющий крем с морской эссенцией 50 г",
   "nameDe": "SEALUXE Tiefenfeuchtigkeitscreme mit Meeresessenz 50 g",
@@ -552,8 +576,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 27,
   "nameRu": "Подтягивающий крем с эффектом лифтинга (50 г)",
   "nameDe": "Straffende Lifting-Creme (50 g)",
@@ -571,8 +596,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 28,
   "nameRu": "SEALUXE Ночной увлажняющий крем 50 г",
   "nameDe": "SEALUXE Nacht-Feuchtigkeitscreme 50 g",
@@ -590,8 +616,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 29,
   "nameRu": "SEALUXE Омолаживающий тонер (210 мл)",
   "nameDe": "SEALUXE Verjüngender Toner (210 ml)",
@@ -609,8 +636,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 30,
   "nameRu": "SEALUXE сыворотка с пробиотиками 40 мл",
   "nameDe": "SEALUXE Probiotisches Serum 40 ml",
@@ -628,8 +656,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 31,
   "nameRu": "SEALUXE Интенсивно увлажняющий крем с жемчугом (30 г)",
   "nameDe": "SEALUXE Intensiv feuchtigkeitsspendende Perlencreme (30 g)",
@@ -647,8 +676,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 32,
   "nameRu": "SEALUXE Крем для кожи вокруг глаз против морщин с проксиланом (20 г)",
   "nameDe": "SEALUXE Anti-Falten Augencreme mit Proxylan (20 g)",
@@ -666,8 +696,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 33,
   "nameRu": "Капсульное масло‑эссенция Camellia (30 капсул × 0,5 мл)",
   "nameDe": "Kamelienöl-Essenz in Kapseln (30 Kapseln × 0,5 ml)",
@@ -685,8 +716,9 @@ const products = [
     "ru": "Уход за кожей лица",
     "de": "Gesichtspflege",
     "en": "Facial Care"
-  },
-  {
+  }
+},
+{
   "id": 34,
   "nameRu": "SEALUXE Легкая маска для лица с камелией",
   "nameDe": "SEALUXE Leichte Gesichtsmaske mit Kamelie",
@@ -705,6 +737,7 @@ const products = [
     "de": "Gesichtspflege",
     "en": "Facial Care"
   }
+ }
 ];
   
   
