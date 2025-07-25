@@ -816,6 +816,8 @@ body, .bg-green-50 { background: #e9faee !important; }
   min-height: 370px;
   height: 100%;
   box-sizing: border-box;
+  /* Новое: делаем одинаковую высоту для мобильных и десктопа */
+  /* min-height уже есть, height: 100% держит сетку */
 }
 .catalog-card img { max-width: 100px; max-height: 100px; margin-bottom: 13px; object-fit: contain; background: transparent; }
 .catalog-card-title {
@@ -831,6 +833,7 @@ body, .bg-green-50 { background: #e9faee !important; }
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
+  width: 100%;
 }
 .catalog-card-desc {
   font-size: 15px;
@@ -845,6 +848,7 @@ body, .bg-green-50 { background: #e9faee !important; }
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
+  width: 100%;
 }
 .catalog-card-price { font-size: 17px; font-weight: 700; color: #30bc6c; margin-bottom: 2px; }
 .catalog-card-article { font-size: 12px; color: #a7b3a7; margin-bottom: 8px; }
@@ -866,6 +870,9 @@ body, .bg-green-50 { background: #e9faee !important; }
     min-height: 260px;
     max-width: 98vw;
     width: 100%;
+    /* фиксированная одинаковая высота для мобильных, регулируй под свой контент */
+    height: 260px;
+    /* ! Важно: не трогать min-height выше, это “страховка” */
   }
   .catalog-card-title {
     font-size: 15px;
@@ -877,6 +884,7 @@ body, .bg-green-50 { background: #e9faee !important; }
     overflow: hidden;
     text-align: center;
     word-break: break-word;
+    width: 100%;
   }
   .catalog-card-desc {
     font-size: 12px;
@@ -888,6 +896,7 @@ body, .bg-green-50 { background: #e9faee !important; }
     overflow: hidden;
     text-align: center;
     word-break: break-word;
+    width: 100%;
   }
   .catalog-categories {
     gap: 5px 5px !important;
@@ -903,6 +912,7 @@ body, .bg-green-50 { background: #e9faee !important; }
   }
 }
 `}</style>
+
 
 
 
