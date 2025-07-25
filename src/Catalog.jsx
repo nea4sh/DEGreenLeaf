@@ -718,7 +718,7 @@ export default function Catalog() {
   return (
     <div>
       {/* --- ВСТРОЕННЫЕ СТИЛИ --- */}
-    <style>
+    <style>{`
   body, .bg-green-50 {
     background: #e9faee !important;
   }
@@ -735,7 +735,86 @@ export default function Catalog() {
     align-items: stretch;
     padding: 0;
   }
-  /* … остальной CSS шапки и категорий без изменений … */
+  .catalog-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 10px 4px 10px;
+    min-height: 72px;
+  }
+  .catalog-flags {
+    display: flex;
+    gap: 7px;
+  }
+  .catalog-flag-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .catalog-flag-btn.active {
+    border: 2px solid #30bc6c;
+  }
+  .catalog-logo {
+    max-height: 90px;
+    max-width: 330px;
+    object-fit: contain;
+    background: transparent;
+    margin: 0;
+  }
+  .catalog-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .catalog-search {
+    display: flex;
+    align-items: center;
+    background: #f3f7f4;
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 17px;
+  }
+  .catalog-search input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 17px;
+    width: 130px;
+    min-width: 0;
+  }
+  .catalog-cart-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+  }
+  .catalog-cart-img {
+    width: 38px;
+    height: 38px;
+  }
+  .catalog-cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #30bc6c;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 100%;
+    padding: 0 7px;
+    min-width: 19px;
+    text-align: center;
+  }
 
   .catalog-categories {
     display: flex;
@@ -755,8 +834,7 @@ export default function Catalog() {
     color: #30bc6c;
     font-weight: 600;
     cursor: pointer;
-
-    /* Позволяем кнопкам сужаться и разбивать длинные слова */
+    /* чтобы текст не вылезал */
     box-sizing: border-box;
     min-width: 0;
     word-break: break-word;
@@ -768,7 +846,6 @@ export default function Catalog() {
     border-color: #23a45a;
   }
 
-  /* --- Товары: фиксируем overflow за счёт minmax и разрыва длинных слов --- */
   .catalog-products {
     margin: 0 auto;
     display: grid;
@@ -777,7 +854,6 @@ export default function Catalog() {
     gap: 26px;
     padding: 0 12px;
   }
-
   .catalog-card {
     background: #fff;
     border-radius: 18px;
@@ -805,7 +881,6 @@ export default function Catalog() {
     text-align: center;
     margin-bottom: 3px;
     width: 100%;
-    /* Разрываем длинные заголовки */
     word-break: break-word;
     overflow-wrap: break-word;
   }
@@ -815,23 +890,69 @@ export default function Catalog() {
     margin-bottom: 8px;
     color: #5d675d;
     width: 100%;
-    /* Разрываем длинные описания */
     word-break: break-word;
     overflow-wrap: break-word;
     min-height: 34px;
   }
-  /* … остальные стили карточки без изменений … */
+  .catalog-card-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #30bc6c;
+    margin-bottom: 2px;
+  }
+  .catalog-card-article {
+    font-size: 12px;
+    color: #a7b3a7;
+    margin-bottom: 8px;
+  }
+  .catalog-card-details {
+    font-size: 14px;
+    background: #f4fbf6;
+    margin-top: 10px;
+    padding: 10px 13px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  .catalog-card-btns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+  }
+  .catalog-card-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 7px 17px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #e8f9ef;
+    color: #23a45a;
+    transition: background 0.13s;
+  }
+  .catalog-card-btn.green {
+    background: #30bc6c;
+    color: #fff;
+  }
 
-  /* --- Адаптивные: 2 в ряд на tablet и мобиле --- */
   @media (max-width: 950px) {
     .catalog-products {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   @media (max-width: 600px) {
+    .catalog-header-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .catalog-logo {
+      max-width: 160px;
+      max-height: 60px;
+    }
     .catalog-products {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 11px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .catalog-card {
       padding: 12px 7px 13px 7px;
@@ -842,7 +963,7 @@ export default function Catalog() {
       max-height: 64px;
     }
   }
-</style>
+`}</style>
 
 
 
