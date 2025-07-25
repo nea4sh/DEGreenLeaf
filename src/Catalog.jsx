@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 
 // ВСТАВЬ СВОЙ МАССИВ PRODUCTS СЮДА (пример ниже)
 const products = [
-  {
+  { 
   "id": 1,
   "nameRu": "Шариковый дезодорант-антиперспирант",
   "nameDe": "Roll-on Deodorant Antitranspirant",
@@ -20,9 +20,8 @@ const products = [
   "usageDe": "Auf saubere, trockene Achselhaut morgens oder bei Bedarf auftragen. Nicht auf gereizter oder verletzter Haut anwenden.",
   "usageEn": "Apply to clean, dry underarms in the morning or as needed. Do not apply to irritated or broken skin.",
   "category": "personalcare"
-  }
-},
-{
+  },
+  {
   "id": 2,
   "nameRu": "Мыло от прыщей с эфирным маслом чайного дерева",
   "nameDe": "Akne-Seife mit Teebaumöl",
@@ -40,9 +39,8 @@ const products = [
   "usageDe": "Auf feuchte Haut auftragen, aufschäumen, einmassieren und mit Wasser abspülen. Morgens und abends verwenden.",
   "usageEn": "Apply to wet skin on face and body, lather, massage gently, and rinse with water. Use morning and evening.",
   "category": "facecare"
-  }
-},
-{
+  },
+  {
   "id": 3,
   "nameRu": "Успокаивающий увлажняющий крем с алоэ вера",
   "nameDe": "Beruhigende Feuchtigkeitscreme mit Aloe Vera",
