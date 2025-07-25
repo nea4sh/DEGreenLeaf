@@ -4,7 +4,7 @@ import React, { useState, useMemo } from "react";
 const products = [
   {
     id: 1,
-    category: "Личная гигиена"
+    category: "Личная гигиена",
     nameRu: "Шариковый дезодорант-антиперспирант",
     nameDe: "Roll-on Deodorant Antitranspirant",
     nameEn: "Roll-on Deodorant Antiperspirant",
