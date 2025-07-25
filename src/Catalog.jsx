@@ -484,22 +484,25 @@ const products = [
 
 // ...твой импорт и массив products...
 
+const languages = [
+  { code: "ru", label: "🇷🇺" },
+  { code: "de", label: "🇩🇪" }
+  // Можно добавить en: { code: "en", label: "🇬🇧" }
+];
+
 export default function Catalog() {
+  const [lang, setLang] = useState("ru");
   const [expanded, setExpanded] = useState(null);
   const [cart, setCart] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
 
-  // Получаем все категории, даже если поля нет
-  const categories = Array.from(new Set(products.map(p => p.category || "Без категории")));
+  // Категории
+  const categories = Array.from(new Set(products.map(p => p.category || (lang === "ru" ? "Без категории" : "Ohne Kategorie"))));
 
-  // Количество определенного товара в корзине
-  const getProductCount = (id) =>
-    cart.filter(item => item.id === id).length;
+  // Кол-во товара в корзине
+  const getProductCount = (id) => cart.filter(item => item.id === id).length;
 
-  const handleToggle = (id) => {
-    setExpanded(expanded === id ? null : id);
-  };
-
+  // Корзина: плюсы и минусы
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
     setShowNotification(true);
@@ -519,10 +522,24 @@ export default function Catalog() {
     }
   };
 
-  const handleRemoveFromCart = (idx) => {
-    setCart(cart.filter((_, i) => i !== idx));
+  // Корзина: удалить все одной позиции
+  const handleRemoveFromCart = (id) => setCart(cart.filter(item => item.id !== id));
+
+  // Языковой перевод кнопок и заголовков
+  const t = {
+    cart: { ru: "Корзина", de: "Warenkorb" },
+    empty: { ru: "Корзина пуста", de: "Warenkorb leer" },
+    send: { ru: "Отправить заказ в Telegram", de: "Bestellung an Telegram senden" },
+    added: { ru: "Товар добавлен в корзину", de: "Zum Warenkorb hinzugefügt" },
+    details: { ru: "Подробнее", de: "Mehr" },
+    add: { ru: "В корзину", de: "In den Warenkorb" },
+    remove: { ru: "Убрать", de: "Entfernen" },
+    article: { ru: "Артикул", de: "Artikel-Nr." },
+    description: { ru: "Описание", de: "Beschreibung" },
+    usage: { ru: "Применение", de: "Anwendung" }
   };
 
+  // Телега: сообщение на нужном языке
   const sendTelegramMessage = () => {
     const counts = {};
     cart.forEach(item => {
@@ -531,32 +548,63 @@ export default function Catalog() {
     const message = Object.entries(counts)
       .map(([id, count]) => {
         const product = products.find(p => p.id === +id);
-        return `• ${product?.nameRu || "Товар"} – ${product?.price || ""} × ${count}`;
+        const prodName = product?.[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || product?.nameRu;
+        return `• ${prodName} – ${product?.price || ""} × ${count}`;
       })
       .join("%0A");
-    const url = `https://t.me/nea4sh_03?text=🛒 Заказ / Bestellung:%0A${message}`;
+    const head =
+      lang === "de"
+        ? "🛒 Bestellung:"
+        : "🛒 Заказ:";
+    const url = `https://t.me/nea4sh_03?text=${encodeURIComponent(`${head}\n${message}`)}`;
     window.open(url, "_blank");
   };
 
+  // Количество товаров в корзине
+  const cartCount = cart.length;
+
   return (
     <div className="bg-green-100 min-h-screen relative">
-      {/* --- Шапка с большим логотипом по центру --- */}
-      <div className="bg-white shadow-md fixed top-0 left-0 right-0 z-30">
-        <div className="max-w-5xl mx-auto flex justify-center items-center py-4">
+      {/* --- Шапка с логотипом и языками --- */}
+      <header className="bg-white fixed top-0 left-0 right-0 z-30 shadow-md">
+        <div className="flex justify-between items-center max-w-4xl mx-auto py-2 px-2">
+          {/* Переключатель языков */}
+          <div className="flex gap-2">
+            {languages.map(lng => (
+              <button
+                key={lng.code}
+                onClick={() => setLang(lng.code)}
+                className={`text-2xl sm:text-3xl ${lang === lng.code ? "drop-shadow" : "opacity-60"}`}
+              >
+                {lng.label}
+              </button>
+            ))}
+          </div>
+          {/* Логотип по центру */}
           <img
             src="https://i.imgur.com/KR2zF5W.png"
             alt="Логотип"
-            className="h-28 w-auto mx-auto"
+            className="h-24 sm:h-32 mx-auto"
+            style={{ flex: 1, objectFit: "contain" }}
           />
+          {/* Корзина */}
+          <div className="flex items-center">
+            <div className="relative">
+              <span className="text-3xl">🛒</span>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">{cartCount}</span>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* --- Корзина справа сверху --- */}
-      <div className="fixed top-6 right-6 z-40 w-[340px] max-w-[92vw]">
+      <div className="fixed top-28 right-3 z-40 w-[330px] max-w-[92vw]">
         <div className="bg-white rounded-2xl shadow-lg p-4">
-          <h3 className="text-xl font-semibold mb-2">Корзина</h3>
+          <h3 className="text-xl font-semibold mb-2">{t.cart[lang]}</h3>
           {cart.length === 0 ? (
-            <div className="text-gray-500 text-sm">Корзина пуста</div>
+            <div className="text-gray-500 text-sm">{t.empty[lang]}</div>
           ) : (
             <div className="space-y-2 max-h-52 overflow-y-auto">
               {Object.entries(
@@ -565,10 +613,10 @@ export default function Catalog() {
                   acc[item.id].count += 1;
                   return acc;
                 }, {})
-              ).map(([id, item], idx) => (
+              ).map(([id, item]) => (
                 <div key={id} className="flex justify-between items-center border-b pb-1">
                   <div>
-                    <span className="font-medium">{item.nameRu}</span>
+                    <span className="font-medium">{item[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || item.nameRu}</span>
                     <span className="block text-xs text-gray-400">{item.price}</span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -582,12 +630,9 @@ export default function Catalog() {
                       className="bg-gray-200 rounded px-2 text-lg font-bold hover:bg-gray-300"
                     >+</button>
                     <button
-                      onClick={() => {
-                        // Удалить все такие товары сразу
-                        setCart(cart.filter(c => c.id !== item.id));
-                      }}
+                      onClick={() => handleRemoveFromCart(item.id)}
                       className="ml-2 text-red-500 hover:text-red-700 text-lg"
-                      title="Убрать из корзины"
+                      title={t.remove[lang]}
                     >×</button>
                   </div>
                 </div>
@@ -599,21 +644,25 @@ export default function Catalog() {
             onClick={sendTelegramMessage}
             className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Отправить заказ в Telegram
+            {t.send[lang]}
           </button>
         </div>
       </div>
 
       {/* --- Основная часть с категориями --- */}
-      <main className="p-4 mt-40 max-w-6xl mx-auto">
+      <main className="p-4 pt-48 max-w-6xl mx-auto">
         {categories.map(category => (
           <div key={category} className="mb-10">
             <h2 className="text-2xl font-bold mb-4 text-green-800">{category}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {products
-                .filter(product => (product.category || "Без категории") === category)
+                .filter(product => (product.category || (lang === "ru" ? "Без категории" : "Ohne Kategorie")) === category)
                 .map(product => {
                   const count = getProductCount(product.id);
+                  const name = product[`name${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || product.nameRu;
+                  const short = product[`short${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || product.shortRu;
+                  const full = product[`full${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || product.fullRu;
+                  const usage = product[`usage${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || product.usageRu;
                   return (
                     <div
                       key={product.id}
@@ -622,30 +671,28 @@ export default function Catalog() {
                       <div className="p-4 space-y-2">
                         <img
                           src={product.image}
-                          alt={product.nameRu}
+                          alt={name}
                           className="w-full h-48 object-contain mb-2"
                         />
-                        <h2 className="text-lg font-semibold text-center">{product.nameRu}</h2>
-                        <p className="text-sm text-gray-500 text-center">{product.nameDe}</p>
-                        <p className="text-md mt-2 text-center">{product.shortRu}</p>
-                        <p className="text-sm text-gray-500 text-center">{product.shortDe}</p>
+                        <h2 className="text-lg font-semibold text-center">{name}</h2>
+                        <p className="text-md mt-2 text-center">{short}</p>
                         <div className="mt-2 text-center font-semibold text-green-600">{product.price}</div>
                         <div className="text-xs text-center text-gray-500">
-                          Артикул: {product.article || "—"}
+                          {t.article[lang]}: {product.article || "—"}
                         </div>
                         <div className="flex justify-center gap-2 mt-2">
                           <button
-                            onClick={() => handleToggle(product.id)}
+                            onClick={() => setExpanded(expanded === product.id ? null : product.id)}
                             className="text-sm px-4 py-1 bg-gray-100 rounded-full hover:bg-gray-200"
                           >
-                            Подробнее / Mehr
+                            {t.details[lang]}
                           </button>
                           {count === 0 ? (
                             <button
                               onClick={() => handleAddToCart(product)}
                               className="text-sm px-4 py-1 bg-green-500 text-white rounded-full hover:bg-green-600"
                             >
-                              В корзину
+                              {t.add[lang]}
                             </button>
                           ) : (
                             <div className="flex items-center gap-1">
@@ -664,14 +711,12 @@ export default function Catalog() {
                         {expanded === product.id && (
                           <div className="mt-3 p-3 bg-gray-50 text-sm rounded-md max-h-60 overflow-y-auto transition-all duration-300 ease-in-out">
                             <div className="mb-2">
-                              <strong>Описание:</strong>
-                              <p>{product.fullRu}</p>
-                              <p className="mt-1 text-gray-500">{product.fullDe}</p>
+                              <strong>{t.description[lang]}:</strong>
+                              <p>{full}</p>
                             </div>
                             <div>
-                              <strong>Применение:</strong>
-                              <p>{product.usageRu}</p>
-                              <p className="mt-1 text-gray-500">{product.usageDe}</p>
+                              <strong>{t.usage[lang]}:</strong>
+                              <p>{usage}</p>
                             </div>
                           </div>
                         )}
@@ -687,7 +732,7 @@ export default function Catalog() {
       {/* --- Уведомление --- */}
       {showNotification && (
         <div className="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
-          Товар добавлен в корзину
+          {t.added[lang]}
         </div>
       )}
     </div>
