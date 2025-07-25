@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import './catalog.css';
 
 // ВСТАВЬ СВОЙ МАССИВ PRODUCTS СЮДА (пример ниже)
 const products = [
@@ -19,8 +20,10 @@ const products = [
     usageRu: "Наносить на чистую и сухую кожу подмышек...",
     usageDe: "Auf saubere, trockene Achselhaut morgens...",
     usageEn: "Apply to clean, dry underarm skin..."
-  },
+  }
   // ... все твои товары!
+]; // ← ЗАКРЫТЬ МАССИВ!
+
 const categories = [
   { code: "deodorant", ru: "Дезодоранты", de: "Deodorants", en: "Deodorants" },
 ];
