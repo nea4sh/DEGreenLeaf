@@ -573,6 +573,26 @@ const products = [
   "usageDe": "Nach der Reinigung großzügig auf das Gesicht auftragen, 10–15 Minuten einwirken lassen, dann mit einem weichen Tuch entfernen und mit warmem Wasser abspülen.",
   "category": "facecare"
   }
+  {
+  "id": 35,
+  "nameRu": "iLiFE Дневные гигиенические прокладки 245 мм (10 шт.)",
+  "nameDe": "iLiFE Tagesbinden 245 mm (10 Stk.)",
+  "shortRu": "8-слойные хлопковые дневные прокладки с анионовым чипом",
+  "shortDe": "8-lagige Baumwoll-Tagesbinden mit Anionenchip",
+  "price": "указать цену",
+  "article": "00000000ILF035",
+  "image": "https://imgur.com/v76pMZI.png",
+  "fullRu": "Инновационные дневные гигиенические прокладки iLiFE длиной 245 мм с 8-слойным дизайном для максимального комфорта и защиты. Слои включают: 1) анионовый магнитный чип, 2) 100% хлопковый слой, 3) Airlaid-бумагу, 4) прокладочную бумагу, 5) высокомолекулярный абсорбирующий слой, 6) воздухопроницаемую мембрану, 7) защитную плёнку, 8) клеевой слой без флуоресценции. Анионовый чип генерирует отрицательные ионы, помогающие нейтрализовать запахи и препятствовать размножению бактерий. Мягкий хлопок, отсутствие ароматизаторов и флуоресцентных добавок делают прокладки безопасными для чувствительной кожи. Airlaid-бумага быстро впитывает влагу и равномерно распределяет её, а воздухопроницаемая мембрана обеспечивает комфорт и сухость в течение всего дня.",
+  "fullDe": "Innovative Tagesbinden iLiFE mit einer Länge von 245 mm und 8-lagigem Design für maximalen Komfort und Schutz. Die Schichten umfassen: 1) anionischer Magnetchip, 2) 100 % Baumwollschicht, 3) Airlaid-Papier, 4) Zwischenpapier, 5) hochmolekulare absorbierende Schicht, 6) atmungsaktive Membran, 7) Schutzfolie, 8) Klebeschicht ohne Fluoreszenz. Der Anionen-Chip erzeugt negative Ionen, die Gerüche neutralisieren und das Bakterienwachstum hemmen. Weiche Baumwolle, frei von Duftstoffen und fluoreszierenden Zusatzstoffen, ist sicher für empfindliche Haut. Airlaid-Papier absorbiert Feuchtigkeit schnell und verteilt sie gleichmäßig, während die atmungsaktive Membran den ganzen Tag über für Komfort und Trockenheit sorgt.",
+  "usageRu": "Снимите защитную полоску и приклейте прокладку на бельё. Используйте в дневное время. После использования утилизируйте в мусорный контейнер. Не смывать в унитаз.",
+  "usageDe": "Schutzstreifen entfernen und die Binde in die Unterwäsche kleben. Für die Tagesanwendung geeignet. Nach Gebrauch im Abfall entsorgen. Nicht in der Toilette entsorgen.",
+  "category": {
+    "code": "personal_hygiene",
+    "ru": "Личная гигиена",
+    "de": "Persönliche Hygiene",
+    "en": "Personal Hygiene"
+  }
+
 ];
   
 
