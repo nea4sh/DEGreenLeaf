@@ -590,11 +590,7 @@ const products = [
   usageRu: "Используйте в течение дня при необходимости. Рекомендуется менять прокладку каждые 3–4 часа.",
   usageDe: "Tagsüber nach Bedarf verwenden. Es wird empfohlen, die Binde alle 3–4 Stunden zu wechseln.",
   usageEn: "Use during the day as needed. It is recommended to change the pad every 3–4 hours.",
-  category: {
-    code: "Личная гигиена",
-    ru: "Личная гигиена",
-    de: "Körperpflege",
-    en: "Personal Care"
+  category: "personalcare"
   }
 }
 ];
