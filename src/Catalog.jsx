@@ -592,7 +592,6 @@ const products = [
   usageEn: "Use during the day as needed. It is recommended to change the pad every 3–4 hours.",
   category: "personalcare"
   }
-}
 ];
 
   
