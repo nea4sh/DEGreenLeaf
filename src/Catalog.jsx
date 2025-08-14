@@ -572,7 +572,7 @@ const products = [
   "usageRu": "На очищенную кожу лица нанесите маску равномерно, оставьте на 10–15 минут, затем удалите мягким полотенцем и смойте теплой водой.",
   "usageDe": "Nach der Reinigung großzügig auf das Gesicht auftragen, 10–15 Minuten einwirken lassen, dann mit einem weichen Tuch entfernen und mit warmem Wasser abspülen.",
   "category": "facecare"
-  }
+  },
   {
   "id": 35,
   "nameRu": "iLiFE Дневные гигиенические прокладки 245 мм (10 шт.)",
