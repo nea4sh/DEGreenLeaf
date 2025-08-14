@@ -574,26 +574,31 @@ const products = [
   "category": "facecare"
   },
   {
-  "id": 35,
-  "nameRu": "iLiFE Дневные гигиенические прокладки 245 мм (10 шт.)",
-  "nameDe": "iLiFE Tagesbinden 245 mm (10 Stk.)",
-  "shortRu": "8-слойные хлопковые дневные прокладки с анионовым чипом",
-  "shortDe": "8-lagige Baumwoll-Tagesbinden mit Anionenchip",
-  "price": "указать цену",
-  "article": "00000000ILF035",
-  "image": "https://imgur.com/v76pMZI.png",
-  "fullRu": "Инновационные дневные гигиенические прокладки iLiFE длиной 245 мм с 8-слойным дизайном для максимального комфорта и защиты. Слои включают: 1) анионовый магнитный чип, 2) 100% хлопковый слой, 3) Airlaid-бумагу, 4) прокладочную бумагу, 5) высокомолекулярный абсорбирующий слой, 6) воздухопроницаемую мембрану, 7) защитную плёнку, 8) клеевой слой без флуоресценции. Анионовый чип генерирует отрицательные ионы, помогающие нейтрализовать запахи и препятствовать размножению бактерий. Мягкий хлопок, отсутствие ароматизаторов и флуоресцентных добавок делают прокладки безопасными для чувствительной кожи. Airlaid-бумага быстро впитывает влагу и равномерно распределяет её, а воздухопроницаемая мембрана обеспечивает комфорт и сухость в течение всего дня.",
-  "fullDe": "Innovative Tagesbinden iLiFE mit einer Länge von 245 mm und 8-lagigem Design für maximalen Komfort und Schutz. Die Schichten umfassen: 1) anionischer Magnetchip, 2) 100 % Baumwollschicht, 3) Airlaid-Papier, 4) Zwischenpapier, 5) hochmolekulare absorbierende Schicht, 6) atmungsaktive Membran, 7) Schutzfolie, 8) Klebeschicht ohne Fluoreszenz. Der Anionen-Chip erzeugt negative Ionen, die Gerüche neutralisieren und das Bakterienwachstum hemmen. Weiche Baumwolle, frei von Duftstoffen und fluoreszierenden Zusatzstoffen, ist sicher für empfindliche Haut. Airlaid-Papier absorbiert Feuchtigkeit schnell und verteilt sie gleichmäßig, während die atmungsaktive Membran den ganzen Tag über für Komfort und Trockenheit sorgt.",
-  "usageRu": "Снимите защитную полоску и приклейте прокладку на бельё. Используйте в дневное время. После использования утилизируйте в мусорный контейнер. Не смывать в унитаз.",
-  "usageDe": "Schutzstreifen entfernen und die Binde in die Unterwäsche kleben. Für die Tagesanwendung geeignet. Nach Gebrauch im Abfall entsorgen. Nicht in der Toilette entsorgen.",
-  "category": {
-    "code": "personal_hygiene",
-    "ru": "Личная гигиена",
-    "de": "Persönliche Hygiene",
-    "en": "Personal Hygiene"
+  id: 35,
+  nameRu: "iLiFE Дневные гигиенические прокладки",
+  nameDe: "iLiFE Tagesbinden",
+  nameEn: "iLiFE Day Sanitary Pads",
+  shortRu: "8-слойные хлопковые прокладки с анионовым чипом и инфракрасным эффектом",
+  shortDe: "8-lagige Baumwollbinden mit Anionen-Chip und Infraroteffekt",
+  shortEn: "8-layer cotton pads with anion chip and infrared effect",
+  price: "указать цену",
+  article: "00000000ILF035",
+  image: "https://imgur.com/v76pMZI.png",
+  fullRu: "Инновационный 8-слойный дизайн: 1. Анионовый магнитный чип 2. 100% хлопок 3. Аирлайд бумага 4. Прокладочная бумага 5. Высокомолекулярный абсорбирующий слой 6. Воздухопроницаемая мембрана 7. Защитная пленка 8. Слой клея (без флуоресценции). Каждая прокладка создана для максимального комфорта и эффективности. Отсутствие флуоресцентных добавок и ароматизаторов гарантирует естественное ощущение без раздражений. Мягкая быстровпитывающая поверхность идеально подходит для чувствительной кожи. Анионовый чип активно борется с бактериями и запахами, обеспечивая антибактериальное и профилактическое действие.",
+  fullDe: "Innovatives 8-Schicht-Design: 1. Anionen-Magnetchip 2. 100% Baumwolle 3. Airlaid-Papier 4. Zwischenpapier 5. Hochmolekularer Absorptionskern 6. Atmungsaktive Membran 7. Schutzfolie 8. Klebeschicht (ohne Fluoreszenz). Jede Binde wurde für maximalen Komfort und Effizienz entwickelt. Frei von fluoreszierenden Zusätzen und Duftstoffen für ein natürliches Gefühl ohne Reizungen. Die weiche, schnell absorbierende Oberfläche ist ideal für empfindliche Haut. Der Anionen-Chip bekämpft aktiv Bakterien und Gerüche und sorgt für antibakterielle und vorbeugende Wirkung.",
+  fullEn: "Innovative 8-layer design: 1. Anion magnetic chip 2. 100% cotton 3. Airlaid paper 4. Padding paper 5. High-molecular absorbent core 6. Breathable membrane 7. Protective film 8. Adhesive layer (fluorescence-free). Each pad is designed for maximum comfort and efficiency. Free from fluorescent additives and fragrances for a natural feel without irritation. The soft, fast-absorbing surface is ideal for sensitive skin. The anion chip actively fights bacteria and odors, providing antibacterial and preventive effects.",
+  usageRu: "Используйте в течение дня при необходимости. Рекомендуется менять прокладку каждые 3–4 часа.",
+  usageDe: "Tagsüber nach Bedarf verwenden. Es wird empfohlen, die Binde alle 3–4 Stunden zu wechseln.",
+  usageEn: "Use during the day as needed. It is recommended to change the pad every 3–4 hours.",
+  category: {
+    code: "Личная гигиена",
+    ru: "Личная гигиена",
+    de: "Körperpflege",
+    en: "Personal Care"
   }
-
+}
 ];
+
   
 
 const categories = [
